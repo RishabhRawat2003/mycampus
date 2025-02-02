@@ -1,4 +1,4 @@
-
+import Logo from '../Images/Logo.png'
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { MdOutlineEmail } from 'react-icons/md';
@@ -12,11 +12,13 @@ const Register = () => {
   const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false);
 
   return (
-    <div className="h-screen flex flex-col sm:flex-row">
-      <div className="w-full sm:w-full md:w-1/2 p-5 flex flex-col justify-between">
+    <div className="h-auto flex flex-col sm:flex-row">
+      <div className="w-full sm:w-full md:w-1/2 p-5 flex flex-col">
         <div>
           <div className="flex justify-between mt-1">
-            <h1 className="text-2xl font-bold text-red-400">LOGO</h1>
+            <Link to={"/"}>
+              <img src={Logo} alt="logo" className="w-24" />
+            </Link>
             <Link to={"/"} className="text-primarycolor font-semibold">Go Back</Link>
           </div>
           <div className="flex flex-col items-center mt-12 sm:mt-16 md:mt-24">
@@ -113,7 +115,7 @@ const Register = () => {
           </div>
         </div>
 
-        <div className="mt-auto text-center">
+        <div className="mt-auto text-center mb-28">
           <p className="text-gray-700">
             ALREADY HAVE AN ACCOUNT?{' '}
             <Link to={"/login"} className="text-primarycolor underline">LOGIN HERE</Link>
@@ -121,7 +123,7 @@ const Register = () => {
         </div>
       </div>
 
-      <div className="w-full sm:w-full md:w-1/2 relative">
+      <div className="w-full sm:w-full md:w-1/2 relative h-auto">
         <img
           src="https://cdn.pixabay.com/photo/2022/09/07/18/34/ocean-7439351_640.jpg"
           alt="Register"

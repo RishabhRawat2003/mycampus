@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { MdOutlineEmail } from 'react-icons/md';
 import { IoMdEye } from 'react-icons/io';
 import { PiLockKey } from 'react-icons/pi';
+import Logo from '../Images/Logo.png'
 
 const Login = () => {
 
@@ -11,7 +12,9 @@ const Login = () => {
       <div className="w-full sm:w-full md:w-1/2 p-5 flex flex-col justify-start gap-3">
         <div>
           <div className="flex justify-between mt-1">
-            <h1 className="text-2xl font-bold text-red-400">LOGO</h1>
+            <Link to={"/"}>
+              <img src={Logo} alt="logo" className="w-24" />
+            </Link>
             <Link to={"/"} className="text-primarycolor font-semibold">Go Back</Link>
           </div>
           <div className="flex flex-col items-center mt-12 sm:mt-16 md:mt-24">
