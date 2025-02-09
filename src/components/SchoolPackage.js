@@ -60,7 +60,7 @@ const SchoolPackage = () => {
         </div>
 
         {/* Filtered Packages */}
-        <div className='w-full h-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 xl:gap-6'>
+        <div className='w-full h-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 xl:gap-6'>
           {filteredPackages.map((item, index) => (
             <div key={index} className='w-full h-auto flex flex-col justify-between border-2 rounded-xl shadow-lg md:hover:shadow-2xl pb-4 duration-300 ease-in-out'>
               <div className="w-full h-auto flex flex-col">

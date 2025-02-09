@@ -92,14 +92,14 @@ const Footer = () => {
           <FaLinkedinIn className="text-white text-2xl sm:text-3xl cursor-pointer hover:text-gray-300" />
         </div>
 
-        <div className="flex flex-col sm:flex-row justify-between text-white text-center sm:text-left space-y-4 sm:space-y-0">
-          <h2>Email: info@example.com</h2>
-          <h2>Phone: +1 234 567 890</h2>
-          <h2>Address: 123 Main St, City, Country</h2>
+        <div className="flex flex-col lg:flex-row justify-between text-white text-center lg:text-left space-y-4 lg:space-y-0">
+          <h2>Email: Info@mycampussafari.com</h2>
+          <h2>Phone: +91 92891 66556</h2>
+          <h2>Address: A24, First Floor, A Block, Sector 63, Noida, Uttar Pradesh 201301</h2>
         </div>
       </div>
       <p className="text-white text-center text-sm sm:text-base mt-3 px-4 sm:px-0">
-        © 2024 Your Website Name. All Rights Reserved.
+        © 2025 My Campus Safari. All Rights Reserved.
       </p>
     </div>
   );

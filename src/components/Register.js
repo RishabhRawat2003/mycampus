@@ -1,15 +1,80 @@
 import Logo from '../Images/Logo.png'
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { MdOutlineEmail } from 'react-icons/md';
 import { IoMdEye } from 'react-icons/io';
 import { PiLockKey } from 'react-icons/pi';
 import { CgProfile } from "react-icons/cg";
 import { IoArrowBackOutline } from "react-icons/io5";
+import axios from 'axios';
+
+const apiUrl = process.env.REACT_APP_API_URL;
 
 const Register = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false);
+  const [terms, setTerms] = useState(false);
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    password: "",
+    confirmPassword: ""
+  })
+  const navigate = useNavigate()
+
+  const validateForm = () => {
+    let errors = {};
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!formData.fullName.trim()) {
+      errors.name = "Full Name is required.";
+    } else if (formData.fullName.length < 3) {
+      errors.name = "Full Name must be at least 3 characters.";
+    }
+
+    if (!formData.email.trim()) {
+      errors.email = "Email is required.";
+    } else if (!emailRegex.test(formData.email)) {
+      errors.email = "Invalid email format.";
+    }
+
+    if (!formData.password.trim()) {
+      errors.password = "Password is required.";
+    }
+    else if (!formData.confirmPassword.trim()) {
+      errors.confirmPassword = "Confirm Password is required.";
+    } else if (formData.password !== formData.confirmPassword) {
+      errors.confirmPassword = "Passwords do not match.";
+    }
+
+    if (!terms) {
+      errors.terms = "You must accept the Terms and Conditions.";
+    }
+
+    if (Object.keys(errors).length > 0) {
+      alert(Object.values(errors).join("\n"));
+      return false;
+    }
+  
+    return true;
+  };
+
+  // **Register Function**
+  const registerUser = async (e) => {
+    e.preventDefault();
+
+    if (validateForm()) {
+      try {
+        const response = await axios.post(`${apiUrl}/api/v1/signup`, formData);
+        // console.log(response);
+        alert("Registration successful!");
+        navigate("/login"); // Redirect to login page after successful registration
+      } catch (error) {
+        console.error("Error while registering user", error);
+        alert("Registration failed. Please try again.");
+      }
+    }
+  };
 
   return (
     <div className="h-auto flex flex-col sm:flex-row">
@@ -42,6 +107,8 @@ const Register = () => {
                   <input
                     type="text"
                     id="Name"
+                    value={formData.fullName}
+                    onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                     placeholder="Enter Your Full Name"
                     className="w-full mt-1 p-3 pl-10 border border-gray-500 rounded-lg bg-white"
                   />
@@ -57,6 +124,8 @@ const Register = () => {
                   <input
                     type="email"
                     id="Email"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="Enter Your Email"
                     className="w-full mt-1 p-3 pl-10 border border-gray-500 rounded-lg bg-white"
                   />
@@ -72,6 +141,8 @@ const Register = () => {
                   <input
                     type={passwordVisible ? 'text' : 'password'}
                     id="Password"
+                    value={formData.password}
+                    onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                     placeholder="Enter Your Password"
                     className="w-full p-3 pl-10 pr-10 border border-gray-500 rounded-lg"
                   />
@@ -91,6 +162,8 @@ const Register = () => {
                   <input
                     type={confirmPasswordVisible ? 'text' : 'password'}
                     id="ConfirmPassword"
+                    value={formData.confirmPassword}
+                    onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })}
                     placeholder="Confirm Your Password"
                     className="w-full p-3 pl-10 pr-10 border border-gray-500 rounded-lg"
                   />
@@ -104,13 +177,13 @@ const Register = () => {
 
               <div className="flex items-center mb-5">
                 <label className="flex items-center text-primarycolor font-semibold">
-                  <input type="checkbox" className="mr-2 text-primarycolor" />
+                  <input onChange={() => setTerms(!terms)} value={terms} type="checkbox" className="mr-2 text-primarycolor" />
                   I Accept the{' '}
                   <Link className="text-primarycolor underline">Terms and Conditions</Link>
                 </label>
               </div>
 
-              <button className='p-3 mt-5 rounded-lg bg-primarycolor text-white w-full font-semibold'>Create Account</button>
+              <button onClick={registerUser} disabled={!terms} className={`${!terms ? "bg-gray-400 cursor-not-allowed" : "bg-primarycolor text-white"} p-3 mt-5 rounded-lg w-full font-semibold`}>Create Account</button>
             </form>
           </div>
         </div>

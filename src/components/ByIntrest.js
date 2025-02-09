@@ -39,9 +39,9 @@ const ByIntrest = () => {
                             <img
                                 src={item.image} // Assuming 'image' is the key for the image URL
                                 alt={item.title}
-                                className="w-full h-60 object-cover rounded-lg md:h-[300px] md:w-[50%] xl:h-[400px]"
+                                className="w-full h-56 object-cover rounded-lg md:h-[300px] md:w-[50%] xl:h-[400px]"
                             />
-                            <div className="w-full h-auto flex flex-col p-3 md:w-[50%] lg:p-5 xl:p-14">
+                            <div className="w-full h-auto flex flex-col p-3 md:w-[50%] lg:p-5 2xl:p-14">
                                 <h1 className="text-lg font-semibold lg:text-xl xl:text-3xl">{item.name}</h1>
                                 <h3 className="text-sm lg:text-base xl:text-xl xl:my-2"><span className="font-semibold">Duration: </span>{item.duration}</h3>
                                 <h3 className="font-semibold lg:text-lg xl:text-xl xl:font-bold">Highlights</h3>

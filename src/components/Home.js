@@ -16,10 +16,8 @@ const Home = () => {
     return (
         <>
             <div className="relative">
-                <div className="absolute left-0 bottom-[50px] z-20 text-white">
-                    <div>
-                        <HomeInageContent />
-                    </div>
+                <div className='overflow-hidden'>
+                    <HomeInageContent />
                 </div>
             </div>
 

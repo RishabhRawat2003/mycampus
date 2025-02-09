@@ -1,11 +1,33 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { MdOutlineEmail } from 'react-icons/md';
 import { IoMdEye } from 'react-icons/io';
 import { PiLockKey } from 'react-icons/pi';
 import Logo from '../Images/Logo.png'
+import axios from 'axios';
+
+const apiUrl = process.env.REACT_APP_API_URL;
 
 const Login = () => {
+  const [passwordVisible, setPasswordVisible] = useState(false);
+  const [formData, setFormData] = useState({
+    email: '',
+    password: ''
+  })
+  const navigate = useNavigate()
+
+  async function Login() {
+    try {
+      const response = await axios.post(`${apiUrl}/api/v1/login`, formData);
+      // console.log(response.data.token);
+      const token = response.data.token;
+      localStorage.setItem('token', token);
+      alert("Login successful!");
+      navigate("/")
+    } catch (error) {
+      console.log('Error while logging in', error)
+    }
+  }
 
   return (
     <div className="h-screen flex flex-col sm:flex-row">
@@ -29,7 +51,7 @@ const Login = () => {
 
         <div className="flex justify-center mt-8">
           <div className="w-full max-w-md">
-            <form>
+            <form onSubmit={(e) => { e.preventDefault(); Login() }}>
               <div className="mb-5 relative">
                 <label htmlFor="Email" className="block text-primarycolor">
                   EMAIL ADDRESS
@@ -37,6 +59,8 @@ const Login = () => {
                 <div className="relative">
                   <input
                     type="email"
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    value={formData.email}
                     placeholder="Enter Your Email"
                     className="w-full mt-1 p-3 pl-10 border border-gray-500 rounded-lg bg-white"
                   />
@@ -49,12 +73,17 @@ const Login = () => {
                 </label>
                 <div className="relative">
                   <input
-                    type="password"
+                    onChange={(e) => setFormData({ ...formData, password: e.target.value })}
+                    value={formData.password}
+                    type={passwordVisible ? 'text' : 'password'}
                     placeholder="Enter Your Password"
                     className="w-full p-3 pl-10 pr-10 border border-gray-500 rounded-lg"
                   />
                   <PiLockKey className="absolute top-1/2 left-3 transform -translate-y-1/2 text-2xl text-primarycolor cursor-pointer" />
-                  <IoMdEye className="absolute top-1/2 right-3 transform -translate-y-1/2 text-2xl text-primarycolor cursor-pointer" />
+                  <IoMdEye
+                    onClick={() => setPasswordVisible(!passwordVisible)}
+                    className="absolute top-1/2 right-3 transform -translate-y-1/2 text-2xl text-primarycolor cursor-pointer"
+                  />
                 </div>
               </div>
               <div className="flex justify-between items-center mb-5">
@@ -62,9 +91,9 @@ const Login = () => {
                   <input type="checkbox" className="mr-2 text-primarycolor" />
                   Remember Me
                 </label>
-                <Link to={'/reset-password'} className="text-primarycolor font-semibold">
+                {/* <Link to={'/reset-password'} className="text-primarycolor font-semibold">
                   Forgot Password?
-                </Link>
+                </Link> */}
               </div>
               {/* Sign In Button */}
               <div className="flex justify-center">
