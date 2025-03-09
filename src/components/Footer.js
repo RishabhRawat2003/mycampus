@@ -1,5 +1,6 @@
 import React from "react";
 import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
 
@@ -75,11 +76,11 @@ const Footer = () => {
         {/* Quick Links Section */}
         <div>
           <h2 className="font-semibold text-lg mb-4">Quick Links</h2>
-          <ul className="list-disc list-inside space-y-2">
+          <ul className="list-disc list-inside space-y-2 flex flex-col gap-1">
             <li>FAQs</li>
-            <li>Terms & Conditions</li>
-            <li>Privacy Policy</li>
-            <li>Cancellation Policy</li>
+            <Link to="/termscondition"><li>Terms & Conditions</li></Link>
+            <Link to="/refundpolicy"><li>Cancellation Policy</li></Link>
+            <Link to="/paymentpolicy"><li>Payment Policy</li></Link>
             <li>Careers</li>
           </ul>
         </div>

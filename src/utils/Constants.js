@@ -482,3 +482,669 @@ export const CORPORATEIMAGE = [
     "https://plus.unsplash.com/premium_photo-1718146018869-a3034b0f291a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "https://images.unsplash.com/photo-1734290050976-a082932c5901?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 ]
+
+
+
+export const oneDayItinerary = [
+    {
+        title: "One-Day Itinerary 1 (Starting @490)",
+        subtitle: [
+            "Delhi Discovery: A Day of History, Science & Wildlife",
+            "Heritage & STEM Adventure: Unveiling Delhi’s Wonders",
+            "Red Fort to Roaring Tigers: A Journey Through Time & Nature"
+        ],
+        state: 'Delhi',
+        theme: "Heritage, STEM (Science, Technology, Engineering, and Mathematics), and Cultural Learning",
+        time: "6:00 AM – 6:30 PM",
+        schedule: {
+            morning: [
+                "6:00 AM – Departure from School",
+                "8:00 AM – Red Fort (Visit & Guided Tour)\nStep into history at this UNESCO World Heritage Site, an architectural marvel of the Mughal era. Discover its grand halls, towering gates, and its role in India's freedom movement."
+            ],
+            midday: [
+                "10:30 AM – National Science Centre (Interactive STEM Activities)\nHands-on exhibits bring science to life! Dive into physics, robotics, and environmental science through fun and engaging experiments.",
+                "1:15 PM – Buffet Lunch at the National Science Centre"
+            ],
+            afternoon: [
+                "2:30 PM – National Zoological Park\nMeet nature’s finest—from majestic big cats to playful primates—at Delhi’s largest wildlife sanctuary.",
+                "5:30 PM – India Gate & National War Memorial\nAn iconic tribute to India’s brave soldiers, surrounded by serene lawns and the lively Children’s Park.",
+                "6:30 PM – Return to School"
+            ]
+        },
+        bonus: [
+            "Heritage Hunt – A student-led scavenger hunt at the Red Fort to identify key architectural features.",
+            "STEM Challenge – A quick science experiment or robotics challenge at the National Science Centre.",
+            "Wildlife Sketch-Off – A fun animal sketching contest at the National Zoological Park.",
+            "Reflection Session – Discussing the role of history, science, and nature in shaping modern India."
+        ]
+    },
+    {
+        title: "One-Day Itinerary 2 (Starting @490)",
+        subtitle: [
+            "Timeless Tales: From Mughal Marvels to Scientific Wonders",
+            "Delhi’s Legacy: A Day of Heritage, Art & Discovery",
+            "From Qutub to Canvas: Art, Science & Culture Unveiled"
+        ],
+        state: 'Delhi',
+        theme: "Heritage, STEM, and Cultural Learning",
+        time: "6:00 AM – 5:00 PM",
+        schedule: {
+            morning: [
+                "6:00 AM – Departure from School",
+                "8:00 AM – Qutub Minar (Visit & Guided Tour)\nThe world’s tallest brick minaret tells a story of Delhi’s medieval past. Explore Indo-Islamic architecture and its stunning inscriptions."
+            ],
+            midday: [
+                "10:00 AM – Humayun’s Tomb\nThis stunning Persian-influenced structure is the inspiration behind the Taj Mahal. Wander through lush gardens and admire the intricate designs.",
+                "1:00 PM – Buffet Lunch at the Science Museum"
+            ],
+            afternoon: [
+                "2:30 PM – National Gallery of Modern Art\nDiscover India’s finest artworks, from colonial-era paintings to contemporary masterpieces.",
+                "4:00 PM – India Gate & National War Memorial\nA tribute to fallen heroes and a place to reflect on India’s rich history.",
+                "5:00 PM – Return to School"
+            ]
+        },
+        bonus: [
+            "Qutub Quest – A group challenge to decode inscriptions and architectural styles at Qutub Minar.",
+            "Art Imitation Game – Students recreate or interpret famous paintings at the National Gallery of Modern Art.",
+            "War Memorial Tribute – Writing a short note of gratitude or drawing a symbol of peace.",
+            "Heritage Debate – Discussing ‘Which monument best represents Delhi’s history?’"
+        ]
+    },
+    {
+        title: "One-Day Itinerary 3 (Starting @490)",
+        subtitle: [
+            "Delhi’s Powerhouses: A Journey Through Leadership & Innovation",
+            "From Presidents to Planets: A Day of Discovery",
+            "Inside Delhi’s Icons: Rastrapati Bhawan, Railways & Beyond"
+        ],
+        state: 'Delhi',
+        theme: "Heritage, STEM, and Cultural Learning",
+        time: "6:00 AM – 5:00 PM",
+        schedule: {
+            morning: [
+                "6:00 AM – Departure from School",
+                "9:30 AM – Rashtrapati Bhawan (Visit & Guided Tour)\nExplore the grand residence of India’s President, a blend of colonial elegance and Indian tradition."
+            ],
+            midday: [
+                "12:30 PM – Science Museum (Lunch & Visit)\nEngaging exhibits on space, physics, and innovation make science fun and interactive.",
+                "2:00 PM – National Rail Museum\nTake a ride through India’s railway legacy, featuring vintage locomotives and interactive displays."
+            ],
+            afternoon: [
+                "4:00 PM – Nehru Planetarium & Museum\nUnravel the mysteries of the universe with space shows and astronomy exhibits.",
+                "5:00 PM – India Gate\nA serene evening at one of Delhi’s most iconic landmarks.",
+                "6:00 PM – Return to School"
+            ]
+        },
+        bonus: [
+            "Presidential Quiz – Trivia session about Indian Presidents at Rashtrapati Bhawan.",
+            "Railway Time Travel – Create a mini timeline of India’s railway history at the National Rail Museum.",
+            "Astronomy Challenge – Name the constellations spotted in the planetarium’s space show.",
+            "Storytelling at India Gate – Sharing a story of bravery or leadership inspired by history."
+        ]
+    },
+    {
+        title: "One-Day Itinerary 4 (Starting @490)",
+        subtitle: [
+            "Monuments & Minds: A Day of History & Science",
+            "From Mughal Tombs to Modern Science: A Learning Expedition",
+            "Humayun to High-Tech: Delhi’s Past & Future Collide"
+        ],
+        state: 'Delhi',
+        theme: "Heritage, STEM, and Cultural Learning",
+        time: "6:00 AM – 5:00 PM",
+        schedule: {
+            morning: [
+                "6:00 AM – Departure from School",
+                "8:00 AM – Humayun’s Tomb (Visit & Guided Tour)\nA breathtaking precursor to the Taj Mahal, Humayun’s Tomb is an architectural masterpiece of Persian and Mughal influences."
+            ],
+            midday: [
+                "10:00 AM – National Zoological Park\nEncounter exotic animals in a sprawling, green sanctuary.",
+                "2:00 PM – Science Museum (Lunch & Visit)\nExplore the wonders of physics, robotics, and natural history through interactive exhibits."
+            ],
+            afternoon: [
+                "5:00 PM – India Gate Visit & Return"
+            ]
+        },
+        bonus: [
+            "Mughal Architecture Mapping – Sketching key features of Humayun’s Tomb.",
+            "Animal Research Project – Students pick an animal from the zoo and research its habitat and conservation status.",
+            "STEM Experiment Challenge – Hands-on physics or chemistry experiments at the Science Museum.",
+            "Journal Prompt – \"What’s one scientific or historical discovery that changed the world?\""
+        ]
+    },
+    {
+        title: "One-Day Itinerary 5 (Starting @490)",
+        subtitle: [
+            "Delhi’s Icons: Power, History & Science in One Day",
+            "Leadership & Learning: A Capital City Experience",
+            "Presidential Palaces & Railway Rides: A Day of Discovery"
+        ],
+        state: 'Delhi',
+        theme: "Heritage, STEM (Science, Technology, Engineering, and Mathematics), and Cultural Learning",
+        time: "6:00 AM – 5:00 PM",
+        schedule: {
+            morning: [
+                "6:00 AM – Departure from School",
+                "9:30 AM – Rashtrapati Bhawan (Visit & Guided Tour)\nStep into the heart of India’s governance at Rashtrapati Bhawan... Mughal Gardens, and the grandeur of the Durbar Hall."
+            ],
+            midday: [
+                "12:30 PM – Science Museum (Lunch & Visit)\nEngage with hands-on exhibits covering physics, space, robotics, and engineering marvels.",
+                "2:00 PM – National Museum / Rail Museum\n● National Museum: A journey through time...\n● Rail Museum: A paradise for train lovers..."
+            ],
+            afternoon: [
+                "4:00 PM – India Gate & National War Memorial\nA tribute to India’s fallen heroes... Amar Jawan Jyoti and reflect on stories of bravery.",
+                "5:00 PM – Return to School"
+            ]
+        },
+        bonus: [
+            "Presidency Role-Play – Students act as historical figures from Rashtrapati Bhawan’s past.",
+            "Engineering Marvels Discussion – What’s the most impressive science or railway invention?",
+            "Museum Bingo – A checklist of artifacts students must find at the National Museum or Rail Museum.",
+            "Poetry at India Gate – Writing a short poem or tribute for India’s war heroes."
+        ]
+    },
+    {
+        title: "One-Day Itinerary 6 (Adventure Theme)",
+        subtitle: [
+            "Thrill & Chill: A Day of Adventure & Fun",
+            "Delhi’s Ultimate Adventure Escape!",
+            "From Rollercoasters to Splash Zones: The Perfect Getaway"
+        ],
+        state: 'Delhi',
+        schedule: {
+            main: [
+                "6:00 AM – Departure from School",
+                "9:00 AM – Reached Adventure Park\nOptions:\n● EOD Park Mayur Vihar\n● WOW Noida\n● Adventure Island Rohini\n● Appu Ghar Gurgaon\n● Fun and Food Village\n● Splash Waterpark, Karnal Road\n● Jurassic Park, Sonipat\n● MojoLand, Murthal Road\n● Madhavgarh Farm, Gurgaon\n● Pratapgarh Farm, Gurgaon\n● Vishalgarh Farm, Gurgaon\n● Eco Adventure Camp, Najafgarh",
+                "5:00 PM – Return to School"
+            ]
+        },
+        bonus: [
+            "Survival Challenge – Fun problem-solving tasks at adventure parks or farms.",
+            "Obstacle Course Race – A friendly competition at the adventure zones.",
+            "Team-Building Games – Icebreakers, trust exercises, and collaborative tasks.",
+            "Photography Contest – Best action shot or scenic click of the day."
+        ]
+    },
+    {
+        title: "One-Day Trip – Agra (Starting @799)",
+        subtitle: [
+            "Taj & Beyond: A Timeless Journey to Agra",
+            "Mughal Marvels & Market Treasures",
+            "A Day in Agra: History, Art & Sunset Views"
+        ],
+        state: 'Uttar Pradesh',
+        schedule: {
+            morning: [
+                "6:00 AM – Departure from Delhi",
+                "10:00 AM – Arrival in Agra",
+                "11:00 AM – Taj Mahal Visit & Guided Tour\nStep into the world of Mughal romance and architectural brilliance..."
+            ],
+            midday: [
+                "2:00 PM – Lunch at a Local Restaurant\nSavor Agra’s famous Mughlai cuisine...",
+                "3:00 PM – Shopping & Local Marble Artwork Visit\nExplore Agra’s bustling markets...",
+                "4:00 PM – Agra Fort Visit\nWalk through the majestic red sandstone halls..."
+            ],
+            evening: [
+                "6:00 PM – Mehtab Bagh (Sunset View of the Taj Mahal)\nEnd the day with a mesmerizing sunset view...",
+                "6:30 PM – Departure for Delhi",
+                "10:30 PM – Arrival Back Home"
+            ]
+        },
+        bonus: [
+            "Taj Mahal Storytelling Challenge – Students reimagine the love story...",
+            "Architectural Treasure Hunt – Identify hidden details...",
+            "Market Exploration Challenge – A fun scavenger hunt...",
+            "Sunset Photography Contest – Capture the most stunning sunset shot...",
+            "Reflection Journal – \"If you were a Mughal emperor for a day...\""
+        ]
+    },
+    {
+        title: "One-Day Trip – Dehradun (Starting @799)",
+        subtitle: [
+            "Hills & Heritage: A Dehradun Day Adventure",
+            "Nature, Science & Caves: A Day in Dehradun",
+            "From Forest Research to Hidden Waterfalls: A Day of Discovery"
+        ],
+        state: 'Uttarakhand',
+        schedule: {
+            morning: [
+                "6:00 AM – Departure from Delhi",
+                "10:00 AM – Arrival in Dehradun",
+                "10:30 AM – Forest Research Institute (FRI) Visit\nExplore India’s grandest colonial-era scientific institution..."
+            ],
+            midday: [
+                "2:00 PM – Lunch at a Local Café\nEnjoy delicious local specialties...",
+                "3:00 PM – Sahastradhara / Robber’s Cave\n● Sahastradhara...\n● Robber’s Cave..."
+            ],
+            evening: [
+                "5:00 PM – Departure for Delhi",
+                "9:30 PM – Arrival Back Home"
+            ]
+        },
+        bonus: [
+            "Eco-Explorer Challenge – Identify five unique plant species...",
+            "Architectural Sketching at FRI – A quick 10-minute sketch...",
+            "Nature’s Mystery Game – At Robber’s Cave...",
+            "Mountain Music Moment – A quick unplugged singalong...",
+            "Reflection Journal – \"If you could research one environmental topic...\""
+        ]
+    }
+];
+
+export const oneNightTwoDayPackages = [
+    {
+        title: "Dehradun - Mussoorie (1 Night, 2 Days) (Starting @4490)",
+        heading: "Hills, Waterfalls & Colonial Charm: A Mussoorie Escape",
+        state: 'Uttarakhand',
+        schedule: {
+            day1: [
+                "6:00 AM – Departure from Pickup Location",
+                "10:00 AM – Arrival in Dehradun (Breakfast Stop)\nA refreshing halt to fuel up for an exciting mountain adventure.",
+                "12:00 PM – Arrival in Mussoorie, Hotel Check-in & Rest\nBreathe in the crisp mountain air as you settle into your cozy hotel, with stunning views of the rolling hills.",
+                "2:00 PM – Lunch Buffet at Hotel",
+                "3:00 PM – Visit Company Garden\nA beautifully landscaped garden with fountains, boating, and vibrant flowers—a peaceful retreat amidst nature.",
+                "5:00 PM – Stroll Along Mall Road\nExperience the charm of Mussoorie’s bustling Mall Road, lined with colonial-era buildings, cafes, and handicraft stores.",
+                "7:00 PM – Return to Hotel",
+                "8:00 PM – Bonfire with Storytelling & Team Activities\nEnd the day with an evening of warmth, laughter, and engaging activities, surrounded by the cool mountain breeze."
+            ],
+            day2: [
+                "10:00 AM – Hotel Check-out",
+                "11:00 AM – Kempty Falls / Dhanaulti Visit\n● Kempty Falls – A mesmerizing cascade where you can enjoy a refreshing dip or simply soak in the beauty.\n● Dhanaulti – A serene hill station with dense deodar forests and breathtaking views, offering a peaceful escape from city life.",
+                "1:30 PM – Lunch in Dehradun",
+                "3:30 PM – Visit Forest Research Institute (FRI)\nAn architectural masterpiece with grand colonial-era buildings, FRI offers a deep dive into environmental research and forestry.",
+                "5:00 PM – Departure for Home Location"
+            ]
+        },
+        bonus: [
+            "✅🏔 Mountain Explorer Challenge – Spot & click photos of 5 unique things on Mall Road (colonial buildings, street food, handicrafts, etc.).",
+            "✅🔥 Bonfire Story Duel – Two teams compete to tell the best ghost, adventure, or historical tale—winner gets a sweet treat!",
+            "✅🌊 Waterfall Poetry Jam – Write a short poem inspired by Kempty Falls/Dhanaulti & share it dramatically.",
+            "✅🌿 Eco-Hero Mission – Collect & recycle waste at a scenic spot; the most creative 'eco-art' wins! ♻🎨"
+        ],
+        note: '"A perfect mix of nature, history, and adventure—this trip promises memories that last a lifetime!"'
+    },
+    {
+        title: "Haridwar - Rishikesh (1 Night, 2 Days) (Starting @4390)",
+        heading: "Yoga, Adventure & Tranquility: The Best of Haridwar & Rishikesh",
+        state: 'Uttarakhand',
+        schedule: {
+            day1: [
+                "6:00 AM – Departure from Location",
+                "10:00 AM – Arrival in Haridwar, Visit Har Ki Pauri\n● Har Ki Pauri is the heart of Haridwar, where the holy Ganges River is believed to wash away sins. Witness the mesmerizing sight of devotees taking a dip in the sacred waters.\n● Enjoy local snacks like kachoris and lassi as you take in the spiritual energy of the place.",
+                "12:00 PM – Departure for Shivpuri",
+                "1:00 PM – Check-in to Riverside Camp in Shivpuri & Lunch\n● Experience the thrill of staying at a riverside camp amidst the Himalayan foothills.\n● Enjoy a delicious buffet lunch before gearing up for an adventurous afternoon.",
+                "3:00 PM – Team-Building Activities & Adventure Games\n● Engage in fun team-building exercises, rope courses, and light adventure activities in the lush surroundings.",
+                "7:00 PM – Bonfire, Storytelling & Live Music\n● Relax under the starry sky with a bonfire, lively storytelling sessions, and soulful live music.\n● Experience the true essence of outdoor camping with traditional folk tales and bonding moments.",
+                "9:00 PM – Dinner & Lights Out"
+            ],
+            day2: [
+                "8:00 AM – Early Morning Yoga Session by the Ganges\n● Start your day with a refreshing yoga session, breathing in the crisp morning air along the holy river.\n● Learn ancient breathing techniques and postures that promote relaxation and mindfulness.",
+                "10:00 AM – Check-Out & Departure for Ram Jhula\n● Ram Jhula, an iconic suspension bridge, offers breathtaking views of the Ganges and the ashrams lining its banks.\n● Spot monks, spiritual seekers, and travelers walking along its length, soaking in the peaceful ambiance.",
+                "12:00 PM – Visit the Beatles Ashram (Chaurasi Kutia, Pink Floyd Ashram)\n● This abandoned ashram, once visited by The Beatles, is now covered in colorful graffiti and murals, exuding an old-world charm.\n● Explore meditation caves, ancient yoga halls, and artwork that speaks of its psychedelic past.",
+                "3:00 PM – Lunch in Rishikesh & Departure for Home",
+                "7:00 PM – Optional: Witness Ganga Aarti at Har Ki Pauri\n● A magical spectacle where hundreds of lamps float on the Ganges, accompanied by chanting and the sound of temple bells.\n● A perfect way to bid farewell to this soul-enriching journey before heading back."
+            ]
+        },
+        bonus: [
+            "✅🌊 Ganga Quest – Find & note 3 interesting myths or facts about the Ganges from locals, signs, or guides.",
+            "✅🔥 Bonfire 'Rishikesh Rhythms' – Each group creates a short song or chant inspired by their day’s experience & performs it by the fire.",
+            "✅🧘 Yoga Pose Challenge – Strike & name your most creative yoga pose by the river—best one wins a quirky title!",
+            "✅🎨 Beatles Ashram Graffiti Hunt – Find and recreate (via sketching or photography) the most thought-provoking artwork inside the ashram."
+        ],
+        note: '"This trip blends spirituality, adventure, and scenic beauty—offering an unforgettable Himalayan experience!"'
+    },
+    {
+        title: "Jim Corbett (1 Night, 2 Days)(Starting @4790)",
+        heading: "Into the Wild: A Thrilling Safari & Nature Retreat at Jim Corbett",
+        state: 'Uttarakhand',
+        schedule: {
+            day1: [
+                "6:00 AM – Departure from Location",
+                "12:00 PM – Arrival & Check-in at Jim Corbett Resort\n● Set amidst lush greenery, the resort offers a tranquil retreat with modern comforts.\n● Relax, freshen up, and soak in the wilderness.",
+                "1:00 PM – Lunch & Leisure Time",
+                "4:00 PM – Pool Party & Team-Building Activities\n● Enjoy a refreshing dip in the pool and participate in engaging team-bonding activities.",
+                "7:00 PM – Bonfire, Music Night & Storytelling\n● Unwind with music, folk stories, and tales of the jungle as the night sets in.",
+                "9:00 PM – Dinner & Lights Out"
+            ],
+            day2: [
+                "6:00 AM – Early Morning Nature Walk (Optional: Tea & Snacks)\n● Experience the jungle awakening with a guided walk through Corbett’s scenic trails.",
+                "9:00 AM – Breakfast & Departure for Jungle Safari\n● Venture into the heart of Jim Corbett National Park on an open jeep safari.\n● Keep your eyes peeled for Bengal tigers, elephants, deer, and a variety of exotic birds!",
+                "1:00 PM – Safari Ends & Check-Out",
+                "2:00 PM – Visit Corbett Falls\n● A picturesque waterfall hidden within the dense forest, offering a perfect photo-op spot.",
+                "3:00 PM – Lunch & Departure for Home"
+            ]
+        },
+        bonus: [
+            "✅🐾 'Wildlife Bingo' – Spot & check off as many animals/birds from a custom-made bingo card during the safari!",
+            "✅🔥 'Tales by the Fire' – Each group creates and enacts a short jungle mystery or adventure story around the bonfire.",
+            "✅🌿 'Nature’s Treasure Hunt' – Find & collect unique leaves, feathers, or natural objects (without harming nature) and share their significance!",
+            "✅📸 'Best Wildlife Shot Challenge' – Capture the most stunning nature or wildlife moment & showcase your best shot at the end of the trip!"
+        ]
+    },
+    {
+        title: "Nainital - Bhimtal (1 Night, 2 Days)(Starting @4390)",
+        heading: "The Jewel of Kumaon: Nainital & Bhimtal’s Serene Beauty",
+        state: 'Uttarakhand',
+        schedule: {
+            day1: [
+                "6:00 AM – Departure from Location",
+                "1:00 PM – Check-in at a Nainital Hotel & Rest",
+                "2:00 PM – Buffet Lunch at the Hotel",
+                "4:00 PM – Sightseeing: Naini Lake & Mall Road\n● Enjoy a peaceful boat ride in the emerald-green waters of Naini Lake.\n● Stroll through Mall Road, lined with charming shops and eateries, offering a mix of local and Tibetan delicacies.",
+                "8:00 PM – Bonfire, Snacks & Storytelling Session",
+                "9:00 PM – Dinner & Lights Out"
+            ],
+            day2: [
+                "10:00 AM – Check-Out & Departure for Bhimtal",
+                "12:00 PM – Arrival in Bhimtal\n● A quieter alternative to Nainital, Bhimtal boasts a stunning lake, lush hills, and a rich history.",
+                "1:00 PM – Visit Bhimtal Lake (Post-Lunch)\n● A scenic lake surrounded by forested hills, ideal for boating and birdwatching.",
+                "1:30 PM – Visit Aquarium Island Café (Optional)\n● A unique café located on an island in the middle of Bhimtal Lake, home to exotic fish species.",
+                "2:00 PM – Departure for Home"
+            ]
+        },
+        bonus: [
+            "✅🛶 'Lake Legends Quiz' – A fun trivia game about Nainital & Bhimtal’s history, myths, and hidden stories during the boat ride!",
+            "✅🏔 'Mountain Scavenger Hunt' – Find and capture unique sights like a specific bird, a temple bell, or a local snack!",
+            "✅🔥 'Tales by the Fire' – Share or create folk stories inspired by Kumaon’s legends around the bonfire!",
+            "✅🎨 'Postcard from the Hills' – Sketch or write a mini travel postcard about the most memorable moment of the trip! ✍🏞"
+        ]
+    },
+    {
+        title: "Rishikesh - Tehri Lake (1 Night, 2 Days)(Starting @4790)",
+        heading: "The Best of Uttarakhand: Yoga, Rafting & Tehri’s Scenic Beauty",
+        state: 'Uttarakhand',
+        schedule: {
+            day1: [
+                "6:00 AM – Departure from Location",
+                "10:00 AM – Arrival in Haridwar & Visit to Har Ki Pauri\n● Experience the spiritual energy of the sacred Ganga, where thousands gather for prayers and rituals.\n● Enjoy some quick local snacks before heading towards adventure!",
+                "12:00 PM – Departure for Shivpuri",
+                "1:00 PM – Check-in at Riverside Camp\n● A tranquil setting along the Ganges, offering stunning views of the river and mountains.\n● Freshen up and enjoy a buffet lunch before the adventure begins.",
+                "4:00 PM – Team-Building Activities & Relaxation\n● Engage in fun activities designed to encourage teamwork and bonding.",
+                "7:00 PM – Bonfire, Storytelling & Live Music\n● Experience an enchanting night with folk tales, travel stories, and soft melodies by the riverside.",
+                "9:00 PM – Dinner & Rest"
+            ],
+            day2: [
+                "8:00 AM – Departure for Tehri Lake\n● A breathtaking reservoir nestled amidst the Himalayan foothills, offering adventure sports and stunning landscapes.",
+                "9:00 AM – Water Activities at Tehri Lake\n● Choose from thrilling activities like jet skiing, kayaking, speed boating, and banana boat rides.\n● Or simply enjoy the panoramic views and soak in the serenity.",
+                "12:00 PM – Lunch at a Scenic Spot",
+                "2:00 PM – Departure for Home"
+            ]
+        },
+        bonus: [
+            "✅🌊 'Riverside Reflection' – A journaling activity by the Ganges: Write down one fear you want to overcome & let the river inspire you! ✍🌿",
+            "✅🔥 'Echoes of the Himalayas' – Story swap by the bonfire: Share a travel memory or create a short adventure tale set in the mountains! 🎭",
+            "✅🏄 'Water Warrior Challenge' – A fun team challenge: Who can paddle the farthest (or balance longest) during water activities? 💦",
+            "✅🖼 'Postcard from Tehri' – Capture the lake’s beauty through a quick sketch or a creative captioned photo! 🎨"
+        ]
+    },
+    {
+        title: "Kanatal - Dhanaulti - Mussoorie (1 Night, 2 Days)(Starting @4790)",
+        heading: "Nature, Trekking & Serenity: Discovering Kanatal & Mussoorie",
+        state: 'Uttarakhand',
+        schedule: {
+            day1: [
+                "6:00 AM – Departure from Location",
+                "2:00 PM – Arrival in Kanatal & Check-in to Camps\n● A peaceful hill station with pristine views and thrilling outdoor experiences.\n● Have lunch and settle into your adventure-themed campsite.",
+                "4:00 PM – Local Adventure Activities\n● Engage in rock climbing, zip-lining, and valley crossing for an adrenaline rush!",
+                "6:00 PM – Bonfire, Storytelling & Live Music",
+                "9:00 PM – Dinner & Stargazing"
+            ],
+            day2: [
+                "6:00 AM – Trekking in Kanatal\n● A refreshing morning trek through pine forests with scenic views.",
+                "9:00 AM – Breakfast & Departure for Mussoorie",
+                "10:00 AM – Stop at Dhanaulti Eco Park\n● A nature park with dense deodar forests and well-maintained walking trails.",
+                "11:00 AM – Arrival in Mussoorie & Visit to Mall Road\n● A bustling street with cafes, bookshops, and handicraft stores.\n● (Optional) Mussoorie Ropeway Ride: A fun cable car ride offering breathtaking aerial views of the hill town.",
+                "2:00 PM – Departure for Home"
+            ]
+        },
+        bonus: [
+            "✅🏕 'Survival Skills Challenge' – Learn and demonstrate basic outdoor survival hacks like knot tying or fire-starting (under supervision)! 🏞",
+            "✅🌌 'Star Stories' – Connect the night sky to folklore: Spot constellations and create a short myth around them! ✨📖",
+            "✅🥾 'Trailblazer Trek Trivia' – A nature-themed quiz during the trek—who can spot and name the most trees, birds, or animal tracks? 🐾",
+            "✅📸 'Scenic Snap Hunt' – Capture the most unique shot of nature, adventure, or a local experience & share a fun caption! 🏔"
+        ]
+    },
+    {
+        title: "Jaipur (1 Night, 2 Days)(Starting @3910)",
+        heading: "Pink City’s Royal Retreat: History, Culture & Traditions",
+        state: 'Rajasthan',
+        schedule: {
+            day1: [
+                "6:00 AM – Departure from Location",
+                "12:00 PM – Arrival in Jaipur & Check-in to Hotel",
+                "1:00 PM – Lunch Buffet",
+                "2:00 PM – Local Sightseeing: Jaipur’s Iconic Landmarks\n● Hawa Mahal – The 'Palace of Winds,' an architectural marvel with intricate lattice windows.\n● Jantar Mantar – An 18th-century astronomical observatory with massive instruments.\n● City Palace – A royal residence with museums showcasing Jaipur’s regal history.",
+                "7:00 PM – Evening Snack, Storytelling & Live Music",
+                "9:00 PM – Dinner & Lights Out"
+            ],
+            day2: [
+                "9:00 AM – Depart for Local Sightseeing\n● Jal Mahal – A picturesque water palace in the middle of Man Sagar Lake.\n● Amber Fort – A majestic fortress with a blend of Hindu and Mughal architecture.\n● Jaigarh Fort/Nahargarh Fort (Optional) – Offering panoramic views of Jaipur’s landscape.",
+                "2:00 PM – Cultural Experience (Choose One)\n● Elephant Painting Activity – An interactive experience where you can paint and interact with elephants.\n● Visit to Chokhi Dhani – A traditional Rajasthani village-themed resort offering folk performances and authentic cuisine.",
+                "4:00 PM – Departure for Home"
+            ]
+        },
+        bonus: [
+            "✅👑 'Royal Treasure Hunt' – Find hidden symbols, patterns, or details at City Palace, Hawa Mahal, or Jantar Mantar! 🔍",
+            "✅📜 'Mughal vs Rajput Debate' – Discuss the architectural and cultural influences of the Mughals vs Rajputs in Jaipur’s forts and palaces! 🏯",
+            "✅🎨 'Miniature Art Challenge' – Try sketching a traditional Rajasthani miniature painting element like an elephant, peacock, or palace dome! 🖌",
+            "✅💃 'Folk Dance Face-Off' – Learn and showcase moves from traditional Rajasthani dance styles like Ghoomar or Kalbelia! 🔥"
+        ]
+    },
+    {
+        title: "Jaipur (Alternative Itinerary with Jhalana Leopard Safari)(Starting @4290)",
+        heading: "Jaipur Beyond the Royals: Exploring Wildlife & Heritage",
+        state: 'Rajasthan',
+        schedule: {
+            day1: [
+                "6:00 AM – Departure from Location",
+                "12:00 PM – Arrival in Jaipur & Check-in to Hotel",
+                "1:00 PM – Lunch Buffet",
+                "2:00 PM – Jaipur’s Highlights\n● Pink City Tour covering Hawa Mahal, Jantar Mantar & City Palace.",
+                "4:00 PM – Jhalana Leopard Safari\n● An offbeat wildlife adventure where you might spot leopards, hyenas, and jackals in their natural habitat.",
+                "7:00 PM – Evening Snack, Storytelling & Live Music",
+                "9:00 PM – Dinner & Rest"
+            ],
+            day2: [
+                "9:00 AM – Depart for Sightseeing\n● Jal Mahal – A stunning palace floating in a lake.\n● Amber Palace/Jaigarh Fort/Nahargarh Fort – Choose your fortress adventure!",
+                "2:00 PM – Cultural Experience (Elephant Painting or Chokhi Dhani)",
+                "4:00 PM – Departure for Home"
+            ]
+        },
+        bonus: [
+            "✅🐆 'Wildlife Spotting Bingo' – Tick off leopards, hyenas, peacocks, and other wildlife during the Jhalana Safari! 📋",
+            "✅🏰 'Fort Chronicles' – Craft a short story imagining life inside Amber Fort or Jaigarh Fort during royal times! ✍📖",
+            "✅🔭 'Astronomer’s Quest' – At Jantar Mantar, challenge yourself to decode the workings of ancient astronomical instruments! 🛰",
+            "✅🎭 'Heritage Role-Play' – Act out a scene as Rajput warriors, Mughal architects, or local traders in Jaipur’s bustling streets! ⚔"
+        ]
+    }
+];
+
+export const twoNightThreeDayPackages = [
+    {
+        title: "3-Day Shimla-Kufri Adventure: Snow, Serenity & Colonial Charm (Starting @6290)",
+        theme: "Heritage, Nature, Adventure",
+        duration: "2 Nights, 3 Days",
+        state: 'Himachal Pradesh',
+        schedule: {
+            day1: [
+                "6:00 AM – Departure\nBuckle up for a scenic road trip through the winding hills of Himachal Pradesh, where every curve reveals breathtaking views of the Shivalik ranges.",
+                "2:00 PM – Arrival in Shimla & Hotel Check-in\nWelcome to Shimla, the 'Queen of Hills', where colonial charm meets mountain tranquility. After check-in, enjoy a delicious buffet lunch before stepping into history.",
+                "3:00 PM – Shimla Sightseeing Extravaganza\n● Indian Institute of Advanced Studies – Step into British history at this magnificent colonial-era building, once the Viceroy’s summer residence. Imagine past rulers strategizing under its grand chandeliers!\n● Jakhoo Hill & Temple – Trek to Shimla’s highest peak to visit the ancient Hanuman Temple and soak in breathtaking panoramic views. Watch out for mischievous monkeys!\n● Chadwick Falls – Hidden deep in deodar forests, this 100m cascading waterfall is a photographer’s paradise and a peaceful escape.\n● Christ Church – North India’s second-oldest church, glowing with vibrant stained-glass windows and Gothic architecture that whisper tales of the past.\n● Himalayan Bird Park – Encounter rare and exotic birds in a tranquil setting. Can you spot the Himalayan Monal, Himachal’s state bird?",
+                "7:00 PM – Cultural Evening & Storytelling\nGather around for an evening of storytelling and live music, where we dive into Shimla’s British past, ghost tales, and mountain legends.",
+                "9:00 PM – Dinner & Overnight Stay"
+            ],
+            day2: [
+                "7:00 AM – Sunrise Nature Walk & Trek\nBreathe in the crisp mountain air as we take a refreshing walk through pine forests, spotting rare flora and fauna.",
+                "10:30 AM – Kufri Excursion & Thrilling Activities\nA short drive takes us to Kufri, a winter wonderland known for its adventure sports and breathtaking scenery.\n● Optional Adventure Activities – Skiing, horse riding, and tobogganing (seasonal).\n● Himalayan Nature Park – Home to snow leopards, Himalayan bears, and musk deer.\n● Kufri Fun World – One of the world’s highest amusement parks, offering incredible views and thrilling rides!",
+                "2:00 PM – Lunch Break\nEnjoy a meal at a local Kufri café or return to the hotel for a relaxing lunch.",
+                "3:00 PM – Mall Road Exploration\nUnwind at Mall Road, Shimla’s most vibrant street, lined with quaint cafés, colonial buildings, and handicraft shops.",
+                "7:00 PM – Bonfire & Folk Music Night\nSing along with local Himachali folk artists as we gather around a cozy bonfire under the starlit sky.",
+                "9:00 PM – Dinner & Overnight Stay"
+            ],
+            day3: [
+                "10:00 AM – Check-out & Departure\nAfter a relaxed breakfast, we check out and bid farewell to the snowy peaks and pine forests.",
+                "6:00 PM – Arrival Back Home\nA journey filled with adventure, history, and cultural experiences comes to an end—but the memories will last forever!"
+            ]
+        },
+        bonus: [
+            "✅ Photography Challenge: Capture the best landscape, architecture, and wildlife shot.",
+            "✅ Storytelling Session: What if you were a British officer living in Shimla in 1900? Write a short diary entry!",
+            "✅ Treasure Hunt: Find historical spots on Mall Road based on clues!"
+        ]
+    },
+    {
+        title: "3-Day Kullu-Manali Adventure: Snow, Spirituality & Thrill (Starting @6690)",
+        theme: "Adventure, Spirituality, Nature",
+        duration: "2 Nights, 3 Days",
+        state: 'Himachal Pradesh',
+        schedule: {
+            day0: [
+                "10:00 PM – Departure for Manali\nSet off on a picturesque overnight journey, weaving through lush valleys, pine forests, and rushing rivers. Enjoy a night of music, bonding, and stargazing en route."
+            ],
+            day1: [
+                "10:00 AM – Arrival in Manali & Hotel Check-in\nWake up to the chilly mountain air and breathtaking views of the snow-capped Himalayas. Check in, freshen up, and relax before a delicious buffet lunch.",
+                "2:00 PM – Exploring Manali’s Spiritual & Cultural Treasures\n● Hidimba Devi Temple – A sacred wooden temple, hidden amidst towering deodar forests, dedicated to Bhima’s wife from the Mahabharata. A stunning blend of spirituality and nature!\n● Vashisht Hot Springs – Dip your feet in these natural hot springs, believed to have medicinal and healing properties. A relaxing break in the crisp mountain air!",
+                "4:00 PM – Mall Road Stroll & Shopping\nManali’s bustling Mall Road is perfect for picking up local handicrafts, woolen shawls, and Tibetan artifacts. Enjoy a cup of piping hot Himachali chai at a cozy café.",
+                "8:00 PM – Dinner & Overnight Stay\nIndulge in a warm Himachali dinner before resting up for an adventure-packed Day 2!"
+            ],
+            day2: [
+                "7:00 AM – Sunrise Nature Walk & Trek\nStart the day with a refreshing nature walk, soaking in the beauty of misty hills and pine-covered slopes.",
+                "9:00 AM – Breakfast & Departure for Solang Valley\nHead to Solang Valley, a paradise for adventure lovers, offering breathtaking views and thrilling activities.",
+                "10:30 AM – Adventure Extravaganza in Solang Valley\n● Skiing & Snowboarding (seasonal) – Glide down the slopes of the Himalayas!\n● Paragliding – Soar above the valley for breathtaking aerial views.\n● Zorbing & ATV Rides – Roll down hills or speed through rocky terrains for an adrenaline rush.\n● Cable Car Ride – Enjoy a bird’s-eye view of snow-covered peaks and meadows.",
+                "2:00 PM – Lunch in Solang Valley\nFeast on hot momos, Maggi, and local delicacies in a cozy mountain café.",
+                "5:00 PM – Return to Hotel & Relaxation\nUnwind after a thrilling day in the snow with some free time at the hotel.",
+                "7:00 PM – Bonfire & Live Music\nEnd the day with a cozy bonfire under the stars, accompanied by local folk tunes and storytelling.",
+                "9:00 PM – Dinner & Overnight Stay"
+            ],
+            day3: [
+                "10:00 AM – Check-out & Departure for Kullu\nBid farewell to Manali and head to the cultural and spiritual hub of Kullu.",
+                "11:00 AM – Kullu Sightseeing & Cultural Exploration\n● Bijli Mahadev Temple – A short trek leads to this scenic hilltop temple, known for its mystical lightning strike legend.\n● Raghunathji Temple – Dedicated to Lord Rama, this is one of Himachal’s most revered spiritual spots.\n● Naggar Castle – Step into history at this ancient castle, offering stunning valley views and showcasing traditional Himachali architecture.\n● Shawl Factory Visit – Witness the age-old craft of Himachali weaving and pick up some authentic Pashmina souvenirs.",
+                "2:00 PM – Lunch & Departure for Home\nEnjoy a hearty meal before embarking on the return journey, carrying memories of adventure, snow, and spirituality.",
+                "Late Night – Arrival Home"
+            ]
+        },
+        bonus: [
+            "✅ Snowman-Building Contest – Who can craft the most creative snow sculpture?",
+            "✅ Postcard from the Himalayas – Write a postcard to your future self about your experience!",
+            "✅ Local Legends Quiz – Test your knowledge on Kullu-Manali’s history & myths!"
+        ]
+    },
+    {
+        title: "3-Day McLeodganj-Dharamshala Escape: Spirituality, Nature & Culture (Starting @7110)",
+        theme: "Spirituality, Culture, Nature, Adventure",
+        duration: "2 Nights, 3 Days",
+        state: 'Himachal Pradesh',
+        schedule: {
+            day0: [
+                "10:00 PM – Departure for Dharamshala\nSet off on an overnight journey, winding through the majestic Dhauladhar mountains. Enjoy stargazing, fun games, and travel stories along the way."
+            ],
+            day1: [
+                "10:00 AM – Arrival in Dharamshala & Hotel Check-in\nWake up to crisp mountain air and stunning views of the Himalayan foothills. Check in, freshen up, and relax before a delicious lunch buffet.",
+                "3:00 PM – Dharamshala Sightseeing Tour\n● Dharamshala Cricket Stadium – Visit one of the highest cricket stadiums in the world, with a breathtaking backdrop of snow-covered peaks.\n● St. John in the Wilderness Church – A neo-Gothic masterpiece surrounded by dense deodar forests, dating back to 1852.\n● War Memorial – Pay tribute to India’s brave soldiers at this serene yet powerful memorial, set amidst lush gardens.",
+                "8:00 PM – Dinner & Overnight Stay\nEnjoy a hearty Himachali meal before resting up for a spiritual and adventurous Day 2!"
+            ],
+            day2: [
+                "8:00 AM – Breakfast & Departure for McLeodganj\nHead towards McLeodganj, home to Tibetan spirituality, art, and breathtaking landscapes.",
+                "10:00 AM – Bhagsu Temple & Bhagsu Waterfall Trek\nEmbark on a scenic trek to the ancient Bhagsu Temple, dedicated to Lord Shiva. Continue to Bhagsu Waterfall, a peaceful cascade surrounded by lush greenery, perfect for photography and relaxation.",
+                "1:00 PM – Lunch at a Tibetan Café\nSavor authentic Tibetan delicacies like thukpa, momos, and butter tea, while soaking in the peaceful vibes of McLeodganj.",
+                "3:00 PM – Tibetan Cultural Immersion\n● Namgyal Monastery – The personal monastery of the Dalai Lama, a haven of peace, chanting monks, and Buddhist teachings.\n● Tibet Museum – Discover the history and struggles of Tibetan refugees, along with a deep insight into Tibetan culture.\n● McLeodganj Market Walk – Explore shops filled with handmade Tibetan artifacts, prayer flags, woolen shawls, and books on Buddhism.",
+                "6:00 PM – Return to Hotel & Relaxation",
+                "7:30 PM – Bonfire & Music Night\nGather around a cozy bonfire, listen to Himalayan folk tunes, and share travel stories under a star-lit sky.",
+                "9:00 PM – Dinner & Overnight Stay"
+            ],
+            day3: [
+                "10:00 AM – Check-out & Visit Kangra Fort\nExplore one of India’s oldest and largest forts, offering breathtaking valley views, historic temples, and ancient legends.",
+                "1:00 PM – Lunch at a Local Eatery\nEnjoy a traditional Himachali meal before the return journey.",
+                "2:00 PM – Departure for Home\nBid farewell to the Himalayas, carrying memories of serenity, adventure, and cultural enrichment.",
+                "Late Night – Arrival Home"
+            ]
+        },
+        bonus: [
+            "✅ Buddhist Wisdom Session – Reflect on the principles of mindfulness & peace after the monastery visit.",
+            "✅ Photography Contest – Capture the most stunning landscapes, cultural moments, or Tibetan architecture.",
+            "✅ McLeodganj Market Challenge – Find and bargain for a unique Tibetan souvenir!"
+        ]
+    },
+    {
+        title: "3-Day Bir Billing & Kangra Adventure: Paragliding, Forts & Tibetan Vibes (Starting @7110)",
+        theme: "Adventure, Culture, Spirituality, Heritage",
+        duration: "2 Nights, 3 Days",
+        state: 'Himachal Pradesh',
+        schedule: {
+            day0: [
+                "10:00 PM – Departure for Bir Billing\nBuckle up for an overnight road trip to India’s paragliding capital, filled with mountain views, travel games, and stargazing."
+            ],
+            day1: [
+                "10:00 AM – Arrival in Bir & Hotel Check-in\nWake up to refreshing mountain air, check in, freshen up, and fuel up with a hearty breakfast.",
+                "12:00 PM – Paragliding Takeoff at Billing\nExperience the thrill of a lifetime as you take off from Billing (2,400m) and glide over lush green valleys, snow-clad peaks, and scenic landscapes. Your tandem paragliding flight (15-30 minutes) will be professionally guided for a safe yet exhilarating adventure.",
+                "2:00 PM – Lunch at a Café Overlooking the Landing Site\nWatch paragliders descend while enjoying a Tibetan or Himachali meal.",
+                "4:00 PM – Explore Bir’s Monasteries & Culture\n● Chokling Monastery – A striking Tibetan monastery with a giant Buddha statue and colorful prayer flags fluttering in the wind.\n● Dzongsar Khyentse Monastery – A peaceful retreat known for its spiritual teachings and intricate murals.\n● Bir Tea Factory – Learn about Himachali tea production and taste locally grown teas.",
+                "6:00 PM – Sunset Point at Landing Site\nRelax and watch the sky fill with colorful parachutes while the sun dips behind the mountains.",
+                "7:30 PM – Bonfire & Music Night\nGather for a warm bonfire, share travel stories, and enjoy Tibetan chants & local folk music under a starry sky.",
+                "9:00 PM – Dinner & Overnight Stay"
+            ],
+            day2: [
+                "7:00 AM – Breakfast & Departure for Kangra\nEmbark on a scenic drive to Kangra, a town rich in history and legends.",
+                "9:00 AM – Explore Kangra’s Iconic Landmarks\n● Kangra Fort – One of India’s oldest forts, dating back to the 4th century, with a stunning valley view and stories of battles and bravery.\n● Bajreshwari Devi Temple – A shaktipeeth, revered for its spiritual aura and stunning architecture.\n● Masroor Rock Cut Temples (Optional, if time permits) – Known as the ‘Ellora of the Himalayas’, these 8th-century temples are carved out of a single rock.",
+                "1:30 PM – Lunch at a Local Himachali Restaurant\nEnjoy Siddu, Chana Madra, and Babru, authentic local delicacies.",
+                "3:00 PM – Visit the Heritage Village of Pragpur (Optional)\nStroll through cobblestone lanes, British-era houses, and traditional Himachali wooden homes in India’s first heritage village.",
+                "6:00 PM – Return to Bir & Relax\nEnjoy the tranquil mountain vibes back at the hotel.",
+                "7:30 PM – Cultural Night & Bonfire\nAn evening of storytelling, music, and warm conversations.",
+                "9:00 PM – Dinner & Overnight Stay"
+            ],
+            day3: [
+                "7:00 AM – Sunrise Nature Walk to Gunehar Waterfall\nA short trek through forests and meadows leads to this hidden waterfall, perfect for a refreshing morning dip.",
+                "9:00 AM – Breakfast & Check-out\nEnjoy your last meal in the mountains before saying goodbye.",
+                "10:30 AM – Departure for Home\nCarry back memories of flight, culture, and adventure as you journey back.",
+                "Late Night – Arrival Home"
+            ]
+        },
+        bonus: [
+            "✅ Paragliding Photo Contest – Capture the most breathtaking mid-air shots!",
+            "✅ Tibetan Culture Talk – Interact with monks and learn about Buddhist philosophy.",
+            "✅ Heritage Hunt at Kangra Fort – Find historical clues & hidden inscriptions in the fort!"
+        ]
+    },
+    {
+        title: "3-Day Auli Snow Adventure: Skiing, Trekking & Himalayan Bliss (Starting @6590)",
+        theme: "Adventure, Snow Sports, Trekking, Nature",
+        duration: "2 Nights, 3 Days",
+        state: 'Himachal Pradesh',
+        schedule: {
+            day0: [
+                "9:00 PM – Departure from Delhi (Preet Vihar Metro Station)\nMeet your trip captain, get cozy in a deluxe AC coach, and begin the overnight road trip to Auli."
+            ],
+            day1: [
+                "Morning – Scenic Stop at Devprayag\nTake in the breathtaking confluence of the Alaknanda & Bhagirathi Rivers, forming the mighty Ganges. A perfect photo spot steeped in mythology!",
+                "8:30 AM – Breakfast Stop in Srinagar (Uttarakhand)\nEnjoy hot parathas & chai before continuing the picturesque mountain drive.",
+                "1:00 PM – Arrival in Auli & Hotel Check-in\nWelcome to India’s premier ski destination! Settle into Swiss-style camps or cozy mountain lodges, freshen up, and soak in the majestic Himalayan views.",
+                "2:30 PM – Chair Lift Ride & Snow Exploration\nTake a scenic chairlift ride to Auli’s artificial lake, one of the world’s highest man-made lakes. Capture panoramic shots of the snow-draped peaks of Nanda Devi & Trishul.",
+                "4:00 PM – Snow Play & Mini Trek\n❄ Build a snowman, have a friendly snowball fight, or go for a short guided trek to explore Auli’s winter wonderland.",
+                "7:00 PM – Bonfire & Music Night\nGather for a cozy bonfire, share travel stories, and enjoy live acoustic music under a star-lit sky.",
+                "9:00 PM – Dinner & Overnight Stay"
+            ],
+            day2: [
+                "7:00 AM – Sunrise Over Nanda Devi\nWake up early to witness the golden sunrise over the snow-capped Himalayas.",
+                "8:00 AM – Breakfast & Gear Up for Skiing\nGet briefed by professional ski instructors before hitting the powdery white slopes.",
+                "9:30 AM – Skiing & Snowboarding (Guided Session)\n✔ Beginner-friendly lessons with instructors\n✔ Advanced slopes for experienced skiers\n✔ Unmatched views & adrenaline rush!",
+                "12:30 PM – Lunch at a Mountain Café\nEnjoy a hot meal with a view of snowy peaks.",
+                "2:00 PM – Gorson Bugyal Trek (Weather Permitting)\nEmbark on a stunning 3km trek through dense oak & pine forests leading to vast alpine meadows covered in snow.",
+                "7:00 PM – Bonfire & Fun Games Night\nUnwind with Himalayan folklore, stargazing, and a night full of warmth & laughter.",
+                "9:00 PM – Dinner & Overnight Stay"
+            ],
+            day3: [
+                "7:30 AM – Breakfast & Check-out\nOne last cup of mountain chai before bidding farewell to Auli’s winter magic.",
+                "9:00 AM – Visit Narsingh Temple in Joshimath\nA spiritual retreat, believed to be the winter abode of Lord Badrinath, with ancient legends woven into its walls.",
+                "10:00 AM – Begin the Return Journey\nDrive back through winding Himalayan roads, cherishing unforgettable memories.",
+                "Evening – Dinner Stop at Rishikesh’s Riverside Café\nEnjoy a peaceful meal by the holy Ganges, soaking in the serene vibes of Rishikesh.",
+                "10:00 PM – Resume Journey to Delhi",
+                "6:00 AM (Next Day) – Arrival in Delhi"
+            ]
+        },
+        bonus: [
+            "✅ Skiing Challenge – Compete in a friendly skiing race!",
+            "✅ Photography Contest – Capture the best snow moments!",
+            "✅ Gorson Bugyal Trek Reflection – Journal about the Himalayan experience."
+        ]
+    }
+];

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Video from '../Images/campus.mp4'
+import TripConsultationPopup from '../pages/Popup';
 
 const RollingNumber = ({ targetNumber, duration, stepTime }) => {
     const [currentNumber, setCurrentNumber] = useState(0);
@@ -25,6 +26,10 @@ const RollingNumber = ({ targetNumber, duration, stepTime }) => {
 };
 
 const HomeInageContent = () => {
+    const [isPopUp, setIsPopUp] = useState(false)
+    useEffect(() => {
+        setIsPopUp(true)
+    }, [])
     return (
         <>
             <div className='relative w-screen h-screen bg-gray-300'>
@@ -68,7 +73,9 @@ const HomeInageContent = () => {
                     </div>
                 </div>
             </div>
-
+            {
+                isPopUp && <TripConsultationPopup isOpen={isPopUp} onClose={() => setIsPopUp(false)} />
+            }
         </>
 
     );

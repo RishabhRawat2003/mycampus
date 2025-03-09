@@ -40,7 +40,7 @@ const Navbar = () => {
                 return PACKAGEIMAGE;
             case '/contactus':
                 return CONTACTIMAGE;
-            case '/school-packages':
+            case '/experientialprogramme':
                 return SCHOOLIAMGE;
             case '/blogs':
                 return COLLAGEPACKAGE;
@@ -86,9 +86,9 @@ const Navbar = () => {
     return (
         <div
             className={`relative w-full ${location.pathname === "/" ? "" : currentBackgroundImage ? "h-screen" : "h-auto"
-                } ${location.pathname === "/" ? "" : "sm:h-3/4 md:h-[60vh] lg:h-[75vh]"}`}
+                } ${location.pathname === "/" || location.pathname === "/termscondition" || location.pathname === "/paymentpolicy" || location.pathname === "/refundpolicy" ? "" : "sm:h-3/4 md:h-[60vh] lg:h-[75vh]"}`}
             style={
-                location.pathname === "/"
+                location.pathname === "/" || location.pathname === "/termscondition" || location.pathname === "/paymentpolicy" || location.pathname === "/refundpolicy"
                     ? {} // No height or background styles when on the home page
                     : {
                         backgroundImage: currentBackgroundImage
@@ -116,7 +116,7 @@ const Navbar = () => {
                         {[
                             { path: "/", label: "Home" },
                             { path: "/aboutus", label: "About Us" },
-                            { path: "/school-packages", label: "School Program" },
+                            { path: "/experientialprogramme", label: "Experiential Programme" },
                             { path: "/blogs", label: "Blogs" },
                             // { path: "/collage-packages", label: "Collage Packages" },
                             // { path: "/corporate-packages", label: "Corporate Packages" },
@@ -252,9 +252,9 @@ const Navbar = () => {
                         {[
                             { path: "/", label: "Home" },
                             { path: "/aboutus", label: "About Us" },
-                            { path: "/school-packages", label: "School Packages" },
-                            { path: "/collage-packages", label: "Collage Packages" },
-                            { path: "/corporate-packages", label: "Corporate Packages" },
+                            { path: "/experientialprogramme", label: "Experiential Programme" },
+                            // { path: "/collage-packages", label: "Collage Packages" },
+                            // { path: "/corporate-packages", label: "Corporate Packages" },
                             { path: "/contactus", label: "Contact Us" },
                             { path: "/login", label: "Login" },
                         ].map(({ path, label }) => (

@@ -4,6 +4,9 @@ import Footer from "./components/Footer";
 import Error from "./components/Error";
 import React, { Suspense, lazy } from "react";
 import Blogs from "./components/Blogs";
+import TermsAndConditions from "./pages/TermsCondition";
+import PaymentPolicy from "./pages/PaymentPolicy";
+import CancellationRefundPolicy from "./pages/RefundPolicy";
 
 const Home = lazy(() => import("./components/Home"));
 const AboutUs = lazy(() => import("./components/AboutUs"));
@@ -55,7 +58,7 @@ const appRouter = createBrowserRouter([
         )
       },
       {
-        path: "/school-packages",
+        path: "/experientialprogramme",
         element: (
           <Suspense fallback={<div>Loading School Packages...</div>}>
             <SchoolPackage />
@@ -155,6 +158,30 @@ const appRouter = createBrowserRouter([
         element: (
           <Suspense fallback={<div>Loading Itinerary...</div>}>
             <Itinery />
+          </Suspense>
+        )
+      },
+      {
+        path: "/termscondition",
+        element: (
+          <Suspense fallback={<div>Loading Terms & Conditions...</div>}>
+            <TermsAndConditions />
+          </Suspense>
+        )
+      },
+      {
+        path: "/paymentpolicy",
+        element: (
+          <Suspense fallback={<div>Loading Payment Policy...</div>}>
+            <PaymentPolicy />
+          </Suspense>
+        )
+      },
+      {
+        path: "/refundpolicy",
+        element: (
+          <Suspense fallback={<div>Loading Refund Policy...</div>}>
+            <CancellationRefundPolicy />
           </Suspense>
         )
       }

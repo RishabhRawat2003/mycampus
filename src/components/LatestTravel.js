@@ -8,7 +8,7 @@ const LatestTravel = () => {
     <div className="px-6 sm:px-10 relative">
       <div className="py-5">
         <h1 className="text-2xl sm:text-3xl xl:text-4xl font-bold text-center text-[#49545A] tracking-wide">
-          Our Latest Travel Stories
+          Our Best Selling Tours
         </h1>
       </div>
 
