@@ -7,6 +7,10 @@ import Blogs from "./components/Blogs";
 import TermsAndConditions from "./pages/TermsCondition";
 import PaymentPolicy from "./pages/PaymentPolicy";
 import CancellationRefundPolicy from "./pages/RefundPolicy";
+import AdminLogin from "./components/AdminComponents/AdminLogin";
+import AdminDashboard from "./components/AdminComponents/AdminDashboard";
+import AdminBlogs from "./components/AdminComponents/AdminBlogs";
+import AdminPackages from "./components/AdminComponents/AdminPackages";
 
 const Home = lazy(() => import("./components/Home"));
 const AboutUs = lazy(() => import("./components/AboutUs"));
@@ -32,6 +36,16 @@ function Main() {
       <Navbar />
       <Outlet />
       {!noFooterRoutes.includes(location.pathname) && <Footer />}
+    </div>
+  );
+}
+
+function Main2() {
+  const location = useLocation();
+  const noFooterRoutes = ["/admin-dashboard", "/admin-blogs", "/admin-packages"];
+  return (
+    <div>
+      <Outlet />
     </div>
   );
 }
@@ -102,6 +116,14 @@ const appRouter = createBrowserRouter([
         element: (
           <Suspense fallback={<div>Loading Login...</div>}>
             <Login />
+          </Suspense>
+        )
+      },
+      {
+        path: "/admin-login",
+        element: (
+          <Suspense fallback={<div>Loading Admin Login page...</div>}>
+            <AdminLogin />
           </Suspense>
         )
       },
@@ -187,7 +209,39 @@ const appRouter = createBrowserRouter([
       }
     ],
     errorElement: <Error />
+  },
+  {
+    path: "/admin-dashboard",
+    element: <Main2 />,
+    children: [
+      {
+        path: "/admin-dashboard",
+        element: (
+          <Suspense fallback={<div>Loading Admin dashboard...</div>}>
+            <AdminDashboard />
+          </Suspense>
+        )
+      },
+      {
+        path: "/admin-dashboard/admin-blogs",
+        element: (
+          <Suspense fallback={<div>Loading Admin blogs...</div>}>
+            <AdminBlogs />
+          </Suspense>
+        )
+      },
+      {
+        path: "/admin-dashboard/admin-packages",
+        element: (
+          <Suspense fallback={<div>Loading Admin Packages...</div>}>
+            <AdminPackages />
+          </Suspense>
+        )
+      },
+    ],
+    errorElement: <Error />
   }
+  
 ]);
 
 function App() {
