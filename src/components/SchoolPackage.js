@@ -1,37 +1,42 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { oneNightTwoDayPackages, twoNightThreeDayPackages, oneDayItinerary } from '../utils/Constants';
+import axios from 'axios';
 import SchoolImageContent from './SchoolImageContent';
 import School from '../Images/school.png';
 
 const SchoolPackage = () => {
-  // Combine all packages into one array
-  const allPackages = [
-    ...oneDayItinerary.map(item => ({
-      ...item,
-      type: 'One Day Itinerary',
-    })),
-    ...oneNightTwoDayPackages.map(item => ({
-      ...item,
-      type: 'One Night Two Days Package',
-    })),
-    ...twoNightThreeDayPackages.map(item => ({
-      ...item,
-      type: 'Two Night Three Days Package',
-    })),
-  ];
-
-  // Filter options
-  const filterCategories = {
-    duration: ['One Day Itinerary', 'One Night Two Days Package', 'Two Night Three Days Package'],
-    state: ['Uttarakhand', 'Rajasthan', 'Delhi', 'Himachal Pradesh', 'Uttar Pradesh']
-  };
-
-  // State for filters
+  const [packages, setPackages] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
   const [filters, setFilters] = useState({
     duration: [],
-    state: []
+    state: [],
+    theme: []
   });
+
+  const apiUrl = process.env.REACT_APP_API_URL;
+
+  // Fetch packages from API
+  const fetchPackages = async () => {
+    try {
+      const response = await axios.get(`${apiUrl}/api/v1/package/get-packages`);
+      setPackages(response.data.packages);
+      setLoading(false);
+    } catch (err) {
+      setError('Failed to fetch packages');
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchPackages();
+  }, []);
+
+  // Get unique filter options from packages
+  const getFilterOptions = (key) => {
+    const uniqueValues = [...new Set(packages.map(pkg => pkg[key]).filter(Boolean))];
+    return uniqueValues.sort();
+  };
 
   // Handle filter changes
   const handleFilterChange = (category, value) => {
@@ -43,14 +48,16 @@ const SchoolPackage = () => {
     }));
   };
 
-  // Filtered packages
-  const filteredPackages = allPackages.filter(pkg =>
-    (filters.duration.length === 0 || filters.duration.includes(pkg.type)) &&
-    (filters.state.length === 0 || filters.state.includes(pkg.state))
-  );
+  // Filter packages based on selected filters
+  const filteredPackages = packages.filter(pkg => {
+    const durationMatch = filters.duration.length === 0 || filters.duration.includes(pkg.duration);
+    const stateMatch = filters.state.length === 0 || filters.state.includes(pkg.state);
+    const themeMatch = filters.theme.length === 0 || filters.theme.includes(pkg.theme);
+    return durationMatch && stateMatch && themeMatch;
+  });
 
-  // Random image generator
-  const getRandomImage = () => `https://picsum.photos/400/300?random=${Math.floor(Math.random() * 1000)}`;
+  if (loading) return <div className="text-center py-8">Loading packages...</div>;
+  if (error) return <div className="text-center py-8 text-red-500">{error}</div>;
 
   return (
     <>
@@ -86,7 +93,7 @@ const SchoolPackage = () => {
           <div className="bg-white p-6 rounded-xl shadow-sm">
             <h3 className="text-lg font-bold mb-4 text-gray-800">Filter by Duration</h3>
             <div className="space-y-3">
-              {filterCategories.duration.map(option => (
+              {getFilterOptions('duration').map(option => (
                 <label key={option} className="flex items-center space-x-3 cursor-pointer">
                   <input
                     type="checkbox"
@@ -104,12 +111,30 @@ const SchoolPackage = () => {
           <div className="bg-white p-6 rounded-xl shadow-sm">
             <h3 className="text-lg font-bold mb-4 text-gray-800">Filter by State</h3>
             <div className="space-y-3">
-              {filterCategories.state.map(option => (
+              {getFilterOptions('state').map(option => (
                 <label key={option} className="flex items-center space-x-3 cursor-pointer">
                   <input
                     type="checkbox"
                     checked={filters.state.includes(option)}
                     onChange={() => handleFilterChange('state', option)}
+                    className="w-5 h-5 text-blue-600 rounded focus:ring-blue-500"
+                  />
+                  <span className="text-gray-700">{option}</span>
+                </label>
+              ))}
+            </div>
+          </div>
+
+          {/* Theme Filter */}
+          <div className="bg-white p-6 rounded-xl shadow-sm">
+            <h3 className="text-lg font-bold mb-4 text-gray-800">Filter by Theme</h3>
+            <div className="space-y-3">
+              {getFilterOptions('theme').map(option => (
+                <label key={option} className="flex items-center space-x-3 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={filters.theme.includes(option)}
+                    onChange={() => handleFilterChange('theme', option)}
                     className="w-5 h-5 text-blue-600 rounded focus:ring-blue-500"
                   />
                   <span className="text-gray-700">{option}</span>
@@ -123,32 +148,33 @@ const SchoolPackage = () => {
         <div className="flex-1">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredPackages.map((pkg, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                <img
-                  src={getRandomImage()}
-                  alt={pkg.title}
-                  className="w-full h-48 object-cover"
-                />
+              <div key={pkg._id} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                {pkg.images?.[0] && (
+                  <img
+                    src={pkg.images[0]}
+                    alt={pkg.packageName}
+                    className="w-full h-48 object-cover"
+                  />
+                )}
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
                     <span className="text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full">
-                      {pkg.type}
+                      {pkg.duration}
                     </span>
-                    <span className="text-sm text-gray-500">{pkg.state}</span>
+                    <div className="space-x-2">
+                      <span className="text-sm text-gray-500">{pkg.state}</span>
+                      {pkg.theme && <span className="text-sm text-gray-500">• {pkg.theme}</span>}
+                    </div>
                   </div>
-                  {
-                    pkg.title.includes('One-Day')
-                      ? <h3 className="text-xl font-semibold mb-2 text-gray-800">{pkg.subtitle[0]}</h3>
-                      : <h3 className="text-xl font-semibold mb-2 text-gray-800">
-                        {pkg.heading || pkg.title.split(" (Starting @")[0]}
-                      </h3>
-                  }
+                  <h3 className="text-xl font-semibold mb-2 text-gray-800">
+                    {pkg.packageName}
+                  </h3>
                   <div className="flex gap-3 mt-4">
                     <button className="flex-1 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors">
                       Book Now
                     </button>
                     <Link
-                      to="/itinerary"
+                      to={`/itinerary/${pkg._id}`}
                       className="flex-1 text-center border border-blue-600 text-blue-600 py-2 rounded-lg hover:bg-blue-50 transition-colors"
                     >
                       Details
