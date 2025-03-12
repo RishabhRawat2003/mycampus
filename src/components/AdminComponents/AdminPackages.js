@@ -427,7 +427,7 @@ const AdminPackages = () => {
             </div>
             <div className="p-4">
               <h3 className="text-xl font-bold">{pkg.packageName}</h3>
-              <p className="text-gray-600">${pkg.price} • {pkg.duration}</p>
+              <p className="text-gray-600">₹{pkg.price} • {pkg.duration}</p>
               <p className="text-gray-600">State: {pkg.state}</p>
               <div className="flex gap-2 mt-2">
                 <button

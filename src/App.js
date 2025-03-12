@@ -11,6 +11,7 @@ import AdminLogin from "./components/AdminComponents/AdminLogin";
 import AdminDashboard from "./components/AdminComponents/AdminDashboard";
 import AdminBlogs from "./components/AdminComponents/AdminBlogs";
 import AdminPackages from "./components/AdminComponents/AdminPackages";
+import SingleIternaryPage from "./pages/SingleIternaryPage";
 
 const Home = lazy(() => import("./components/Home"));
 const AboutUs = lazy(() => import("./components/AboutUs"));
@@ -76,6 +77,14 @@ const appRouter = createBrowserRouter([
         element: (
           <Suspense fallback={<div>Loading School Packages...</div>}>
             <SchoolPackage />
+          </Suspense>
+        )
+      },
+      {
+        path: "/single-package/:id",
+        element: (
+          <Suspense fallback={<div>Loading Single Packages Page...</div>}>
+            <SingleIternaryPage />
           </Suspense>
         )
       },

@@ -86,9 +86,9 @@ const Navbar = () => {
     return (
         <div
             className={`relative w-full ${location.pathname === "/" ? "" : currentBackgroundImage ? "h-screen" : "h-auto"
-                } ${location.pathname === "/" || location.pathname === "/termscondition" || location.pathname === "/paymentpolicy" || location.pathname === "/refundpolicy" || location.pathname === "/admin-login" ? "" : "sm:h-3/4 md:h-[60vh] lg:h-[75vh]"}`}
+                } ${location.pathname === "/" || location.pathname === "/termscondition" || location.pathname === "/paymentpolicy" || location.pathname === "/refundpolicy" || location.pathname === "/admin-login" || location.pathname.includes("/single-package") ? "" : "sm:h-3/4 md:h-[60vh] lg:h-[75vh]"}`}
             style={
-                location.pathname === "/" || location.pathname === "/termscondition" || location.pathname === "/paymentpolicy" || location.pathname === "/refundpolicy" || location.pathname === "/admin-login"
+                location.pathname === "/" || location.pathname === "/termscondition" || location.pathname === "/paymentpolicy" || location.pathname === "/refundpolicy" || location.pathname === "/admin-login" || location.pathname.includes("/single-package")
                     ? {} // No height or background styles when on the home page
                     : {
                         backgroundImage: currentBackgroundImage

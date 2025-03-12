@@ -148,7 +148,7 @@ const SchoolPackage = () => {
         <div className="flex-1">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredPackages.map((pkg, index) => (
-              <div key={pkg._id} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+              <Link to={`/single-package/${pkg._id}`} key={pkg._id} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                 {pkg.images?.[0] && (
                   <img
                     src={pkg.images[0]}
@@ -181,7 +181,7 @@ const SchoolPackage = () => {
                     </Link>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
