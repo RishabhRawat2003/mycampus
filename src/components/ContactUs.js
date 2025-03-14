@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import HomeInageContent from './HomeInageContent'
 import ContantImageContent from './ContantImageContent'
 import { TiMessages } from "react-icons/ti";
@@ -8,6 +8,11 @@ import ContactForm from './ContactForm';
 import ContactDetails from './ContactDetails';
 
 const ContactUs = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     return (
         <>
             <div className='bg-gray-50'>

@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 const apiUrl = process.env.REACT_APP_API_URL;
 
@@ -193,6 +193,18 @@ function SingleIternaryPage() {
                     </ul>
                 </div>
             )}
+
+            {/* Book Now Button */}
+            <div className="mt-8">
+                <Link
+                to={'/contactus'}
+                state={{ packageName: packageData.packageName }}
+                    className="bg-primarycolor text-white py-3 px-6 md:px-20 rounded-full font-semibold shadow-md hover:bg-blue-500 transition duration-300"
+                    
+                >
+                    Book Now
+                </Link>
+            </div>
         </div>
     );
 }
