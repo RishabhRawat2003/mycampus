@@ -128,7 +128,7 @@ const ByIntrest = () => {
 
         {/* Bullet Indicators */}
         <div className="flex gap-2 mt-4 justify-center items-center xl:mt-6">
-          {packages.map((_, index) => (
+          {packages.slice(0,8).map((_, index) => (
             <button
               key={index}
               onClick={() => goToSlide(index)}
