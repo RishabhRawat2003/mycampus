@@ -106,12 +106,15 @@ function SingleIternaryPage() {
                 {packageData.price && (
                     <div className="bg-blue-50 p-4 rounded-lg">
                         <h3 className="text-sm font-medium text-blue-600">Price</h3>
-                        <p className="text-2xl font-bold text-gray-900 mt-1">
-                            ₹{packageData.price.toLocaleString()}
-                        </p>
-                        <p className="text-2xl font-bold text-green-500 mt-1">
+                        <p className="text-2xl font-bold text-green-500 mt-1 mb-6">
                             You can also customize your Package
                         </p>
+                        <Link
+                        to={'/contactus'}
+                            className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+                        >
+                            Contact Us
+                        </Link>
                     </div>
                 )}
 
@@ -197,10 +200,10 @@ function SingleIternaryPage() {
             {/* Book Now Button */}
             <div className="mt-8">
                 <Link
-                to={'/contactus'}
-                state={{ packageName: packageData.packageName }}
+                    to={'/contactus'}
+                    state={{ packageName: packageData.packageName }}
                     className="bg-primarycolor text-white py-3 px-6 md:px-20 rounded-full font-semibold shadow-md hover:bg-blue-500 transition duration-300"
-                    
+
                 >
                     Book Now
                 </Link>

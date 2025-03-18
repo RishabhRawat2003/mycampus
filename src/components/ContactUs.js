@@ -24,8 +24,8 @@ const ContactUs = () => {
                         </div>
                     </div>
                 </div>
-                <div className='flex justify-center items-center min-h-screen bg-gray-50'>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 xl:grid-cols-12 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 gap-4 sm:gap-6 md:gap-8 lg:gap-12 xl:gap-16 py-8 sm:py-10  xl:py-16">
+                <div className='flex justify-center items-center min-h-screen bg-gray-50 py-16'>
+                    {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 xl:grid-cols-12 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 gap-4 sm:gap-6 md:gap-8 lg:gap-12 xl:gap-16 py-8 sm:py-10  xl:py-16">
                         <div className='col-span-1 md:col-span-4'>
                             <div>
                                 <ContactDetails />
@@ -34,7 +34,9 @@ const ContactUs = () => {
                         <div className='border rounded-xl col-span-1 md:col-span-6'>
                             <ContactForm />
                         </div>
-                    </div>
+                    </div> */}
+                    <ContactForm />
+
                 </div>
 
             </div>
