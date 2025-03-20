@@ -25,37 +25,37 @@ export const ITINERY = "https://images.unsplash.com/photo-1499591934245-40b55745
 
 export const PACKAGE = [
     {
-        name: "Wildlife",
+        name: "Summer camp",
         package: "50+ Package",
         icon: "safari-icon-1.png",
         image: "https://images.pexels.com/photos/2541239/pexels-photo-2541239.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
     },
     {
-        name: "Heritage",
+        name: "Winter Camp",
         package: "50+ Package",
         icon: "safari-icon-2.png",
         image: "https://images.pexels.com/photos/1542620/pexels-photo-1542620.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
     },
     {
-        name: "Trekking",
+        name: "1-day educational trip",
         package: "50+ Package",
         icon: "rainforest-icon-1.png",
         image: "https://images.pexels.com/photos/914128/pexels-photo-914128.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
     },
     {
-        name: "Wildlife2",
+        name: "2-day educational trip",
         package: "50+ Package",
         icon: "rainforest-icon-2.png",
         image: "https://images.pexels.com/photos/12278086/pexels-photo-12278086.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
     },
     {
-        name: "Heritage2",
+        name: "3-day educational trip",
         package: "50+ Package",
         icon: "galapagos-icon-1.png",
         image: "https://images.pexels.com/photos/1098254/pexels-photo-1098254.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
     },
     {
-        name: "Trekking2",
+        name: "4-day educational trip",
         package: "50+ Package",
         icon: "galapagos-icon-2.png",
         image: "https://images.pexels.com/photos/814898/pexels-photo-814898.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
@@ -122,27 +122,27 @@ export const destinationsByRegion = [
         image: "https://images.pexels.com/photos/17668225/pexels-photo-17668225/free-photo-of-undersea-view-of-striped-fish-swimming-over-a-coral-reef.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     },
     {
-        name: 'MANALI, HIMACHAL PRADESH',
+        name: 'DEHRADUN, UTTARAKHAND',
         packages: '35+ Packages',
         image: "https://images.pexels.com/photos/9140059/pexels-photo-9140059.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     },
     {
-        name: 'MANALI, HIMACHAL PRADESH',
+        name: 'DELHI, DELHI',
         packages: '50+ Packages',
         image: "https://images.pexels.com/photos/29644514/pexels-photo-29644514/free-photo-of-aerial-view-of-mirissa-beach-in-sri-lanka.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     },
     {
-        name: 'MANALI, HIMACHAL PRADESH',
+        name: 'AGRA, UTTARPRADESH',
         packages: '25+ Packages',
         image: "https://images.pexels.com/photos/3574440/pexels-photo-3574440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     },
     {
-        name: 'MANALI, HIMACHAL PRADESH',
+        name: 'JAIPUR, RAJASTHAN',
         packages: '45+ Packages',
         image: "https://images.pexels.com/photos/28386075/pexels-photo-28386075/free-photo-of-a-person-sitting-on-a-hill-in-the-middle-of-a-field.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     },
     {
-        name: 'MANALI, HIMACHAL PRADESH',
+        name: 'JIM CORBETT, UTTARAKHAND',
         packages: '45+ Packages',
         image: "https://images.pexels.com/photos/16508229/pexels-photo-16508229/free-photo-of-tangalle-beach-sri-lanka-drone-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     },

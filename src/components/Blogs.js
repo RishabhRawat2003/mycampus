@@ -10,6 +10,7 @@ function Blogs() {
     const [error, setError] = useState('');
 
     useEffect(() => {
+        window.scrollTo(0, 0)
         const fetchBlogs = async () => {
             try {
                 const response = await axios.get(`${apiUrl}/api/v1/blog/get-blogs`);
@@ -40,10 +41,10 @@ function Blogs() {
             <h1 className='text-center font-bold text-xl text-[#49545A] md:text-3xl xl:text-5xl'>
                 Our Latest Blog
             </h1>
-            <div className='w-full h-auto grid grid-cols-1 sm:grid-cols-2 cursor-pointer lg:grid-cols-3 gap-4 lg:gap-8 my-8'>
+            <div className='w-full h-auto grid grid-cols-1 sm:grid-cols-2 cursor-pointer lg:grid-cols-3 gap-4 lg:gap-8 my-8 lg:px-20'>
                 {blogs.map((item, index) => (
-                    <div key={index} className='w-full h-auto flex flex-col shadow-md border md:hover:shadow-2xl duration-500 ease-in-out rounded-xl overflow-hidden'>
-                        <div className='w-full h-40 lg:h-80'>
+                    <div key={index} className='w-full h-auto flex flex-col shadow-md border md:hover:shadow-2xl duration-500 ease-in-out rounded-[40px] overflow-hidden'>
+                        <div className='w-full h-40 lg:h-60'>
                             <img src={item.image} alt={item.title} className='w-full h-full object-cover' />
                         </div>
                         <div className='p-3 w-full h-auto flex flex-col gap-3 lg:p-5'>

@@ -3,14 +3,19 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import SchoolImageContent from './SchoolImageContent';
 import School from '../Images/school.png';
+import { useLocation } from 'react-router-dom';
+
 
 const SchoolPackage = () => {
   const [packages, setPackages] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
+  const location = useLocation();
+  const initialSelectedState = location.state?.selectedState || '';
+  const fromBestDestination = location.state?.fromBestDestination || false; // Detect navigation from "Best Destination"
   const [filters, setFilters] = useState({
     duration: [],
-    state: [],
+    state: initialSelectedState ? [initialSelectedState] : [],
     theme: []
   });
 
@@ -48,10 +53,26 @@ const SchoolPackage = () => {
     }));
   };
 
+   // Scroll to "filterpackage" section when coming from "Best Destination"
+   useEffect(() => {
+    if (fromBestDestination) {
+      setTimeout(() => {
+        const filterSection = document.getElementById('filterpackage');
+        if (filterSection) {
+          filterSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 500); // Delay ensures smooth scrolling after page load
+    }
+    else{
+      window.scrollTo(0, 0);
+    }
+  }, [fromBestDestination]);
+
+  // Filter packages based on selected filters
   // Filter packages based on selected filters
   const filteredPackages = packages.filter(pkg => {
     const durationMatch = filters.duration.length === 0 || filters.duration.includes(pkg.duration);
-    const stateMatch = filters.state.length === 0 || filters.state.includes(pkg.state);
+    const stateMatch = filters.state.length === 0 || filters.state.includes(pkg.state) || !pkg.state; // Include all if no state is selected
     const themeMatch = filters.theme.length === 0 || filters.theme.includes(pkg.theme);
     return durationMatch && stateMatch && themeMatch;
   });
@@ -74,7 +95,7 @@ const SchoolPackage = () => {
       <div className="p-5 md:p-10 w-full h-auto flex md:px-10 lg:px-20 xl:px-32 lg:my-8">
         <div className='w-full h-[500px] flex flex-col gap-6 sm:flex-row sm:h-[300px] md:h-[400px]'>
           <div className='w-full h-auto text-[#49545A] flex flex-col gap-5'>
-            <h1 className='text-2xl font-bold sm:text-3xl md:text-4xl'>Experiential Programme</h1>
+            <h1 className='text-2xl font-bold sm:text-3xl md:text-4xl'>Experiential Programmes</h1>
             <p className='font-semibold sm:text-xl md:text-2xl'>
               Our excursions are thoughtfully designed to complement school curricula, adding real-world relevance to classroom instruction. Learning becomes memorable and engaging when students see the topics they study come to life.
             </p>
@@ -86,7 +107,7 @@ const SchoolPackage = () => {
       </div>
 
       {/* Filters and Content */}
-      <div className="container mx-auto px-4 py-8 flex flex-col lg:flex-row gap-8">
+      <div id='filterpackage' className="container mx-auto px-4 py-8 flex flex-col lg:flex-row gap-8">
         {/* Filter Sidebar */}
         <div className="lg:w-80 space-y-6">
           {/* Duration Filter */}

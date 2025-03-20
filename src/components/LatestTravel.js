@@ -8,7 +8,7 @@ const LatestTravel = () => {
     <div className="px-6 sm:px-10 relative">
       <div className="py-5">
         <h1 className="text-2xl sm:text-3xl xl:text-4xl font-bold text-center text-[#49545A] tracking-wide">
-          Our Best Selling Tours
+          Our Latest Blogs
         </h1>
       </div>
 
@@ -16,7 +16,7 @@ const LatestTravel = () => {
       <div className="relative w-full xl:px-20 2xl:px-28 mt-5 mx-auto overflow-hidden">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:gap-8 justify-center gap-4">
           {travelStories
-            .slice(0,3) // Show up to 3 items dynamically
+            .slice(0, 3) // Show up to 3 items dynamically
             .map((story, index) => (
               <div
                 key={index}

@@ -30,7 +30,7 @@ const PackageContent = () => {
     return (
         <div className="mt-4 flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12 bg-gray-50">
             <img
-                className="w-full sm:w-10/12 md:w-3/12 lg:w-3/12 xl:w-4/12
+                className="w-full sm:w-10/12 px-2 md:w-3/12 lg:w-3/12 xl:w-4/12
                 h-[30vh] sm:h-[40vh] md:h-[50vh] lg:h-[39vh] xl:h-[90vh] hidden lg:block object-cover"
                 src={LEFTIMAGE}
                 alt="Black Placeholder"
@@ -43,19 +43,19 @@ const PackageContent = () => {
                     </h2>
                     <h1 className="text-3xl w-[90%] sm:text-4xl md:text-5xl font-semibold text-gray-500 py-3">
                         unforgettable
-                        <span className="text-primarycolor"> India holiday</span>
+                        <span className="text-primarycolor"> experience</span>
                     </h1>
 
                     <h2 className="text-xl text-gray-500 w-[90%]">
-                        Let us organize a perfect India experience for you.
+                        Let us organize that perfect trip for you.
                     </h2>
                 </div>
 
                 <div className="relative w-full scroll-smooth">
                     <div className="flex gap-9 lg:gap-5 justify-evenly overflow-hidden px-4 lg:px-0 py-5 scroll-smooth">
                         {PACKAGE.slice(currentIndex, currentIndex + CARDS_PER_VIEW).map((data, index) => (
-                            <div key={index} className="bg-white shadow-md rounded-md relative overflow-visible flex-shrink-0 w-[90%] sm:w-[45%] lg:w-52">
-                                <div className="p-4 text-gray-700 h-40 lg:h-[210px] relative z-10">
+                            <div key={index} className="bg-white shadow-md rounded-md relative overflow-visible flex-shrink-0 w-[70%] sm:w-[45%] lg:w-52">
+                                <div className="p-4 text-gray-700 h-52 lg:h-[260px] relative z-10">
                                     <div className="flex justify-between items-center">
                                         <div>
                                             <h1 className="text-lg lg:text-xl text-gray-600 font-medium">{data.name}</h1>
@@ -67,8 +67,8 @@ const PackageContent = () => {
                                     </div>
                                 </div>
 
-                                <div className="absolute -left-4 sm:-left-6 lg:-left-8 top-16 lg:top-[85px] transform z-20">
-                                    <img src={data?.image} alt="" className="w-32 h-20 sm:w-40 sm:h-24 lg:w-52 lg:h-28 object-cover rounded" />
+                                <div className="absolute -left-4 sm:-left-6 lg:-left-8 top-24 lg:top-[120px] transform z-20">
+                                    <img src={data?.image} alt="" className="w-40 sm:w-40 sm:h-24 lg:w-52 lg:h-28 object-cover rounded" />
                                 </div>
                             </div>
                         ))}

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import HomeInageContent from './HomeInageContent';
 import { BLACKIMAGE, PACKAGE } from '../utils/Constants';
 import PackageContent from './PackageContent';
@@ -12,6 +12,9 @@ import ChooseUs from './ChooseUs';
 import WhyCampusSafari from './WhyCampusSafari';
 
 const Home = () => {
+    useEffect(()=>{
+        window.scrollTo(0,0)
+    },[])
 
     return (
         <>

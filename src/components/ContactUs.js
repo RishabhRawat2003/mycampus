@@ -6,6 +6,7 @@ import { FaEarthAmericas } from "react-icons/fa6";
 import { MdCall } from "react-icons/md";
 import ContactForm from './ContactForm';
 import ContactDetails from './ContactDetails';
+import { FaWhatsapp } from "react-icons/fa";
 
 const ContactUs = () => {
 
@@ -37,6 +38,38 @@ const ContactUs = () => {
                     </div> */}
                     <ContactForm />
 
+                </div>
+
+                <div className="bg-[#f0f8fa] py-10 lg:py-20 mb-10 px-5 md:px-20">
+                    <div className="max-w-6xl mx-auto flex flex-col items-center gap-6 text-center">
+
+                        {/* Noida Office */}
+                        <div className="space-y-3">
+                            <h2 className="text-2xl font-bold text-[#1d2d5a] lg:text-3xl">Noida</h2>
+                            <h3 className="font-semibold text-[#1d2d5a]">Corporate Office</h3>
+                            <p className="flex items-start gap-2 text-gray-600">
+                                📍 A24, First Floor, A Block, Sector 63, Noida
+                            </p>
+                            <p className="flex items-center gap-2 text-gray-600">
+                                📞 +91 9289166556 , +91 9711414123
+                            </p>
+                            <p className="flex items-center gap-2 text-gray-600">
+                                📧 Info@mycampussafari.com
+                            </p>
+                        </div>
+
+                        {/* WhatsApp Chat Button */}
+                        <a
+                            href="https://wa.me/919140826298"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition"
+                        >
+                            <FaWhatsapp className="text-2xl" />
+                            Chat with us
+                        </a>
+
+                    </div>
                 </div>
 
             </div>

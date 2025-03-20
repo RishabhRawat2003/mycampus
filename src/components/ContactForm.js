@@ -101,7 +101,7 @@ const ContactForm = () => {
             <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {/* Name */}
                 <div>
-                    <label className="text-sm text-gray-600">Full Name</label>
+                    <label className="text-sm text-gray-600">Full Name <span className="text-red-500">**</span></label>
                     <input
                         type="text"
                         name="name"
@@ -129,7 +129,7 @@ const ContactForm = () => {
 
                 {/* Phone */}
                 <div>
-                    <label className="text-sm text-gray-600">Phone Number</label>
+                    <label className="text-sm text-gray-600">Phone Number <span className="text-red-500">**</span></label>
                     <input
                         type="text"
                         name="phone"
@@ -189,7 +189,7 @@ const ContactForm = () => {
 
                 {/* Destination */}
                 <div>
-                    <label className="text-sm text-gray-600">Destination</label>
+                    <label className="text-sm text-gray-600">Destination <span className="text-red-500">**</span></label>
                     <input
                         type="text"
                         name="destination"
@@ -264,7 +264,7 @@ const ContactForm = () => {
 
                 {/* Travel Date */}
                 <div>
-                    <label className="text-sm text-gray-600">Travel Date</label>
+                    <label className="text-sm text-gray-600">Travel Date <span className="text-red-500">**</span></label>
                     <input
                         type="date"
                         name="travelDate"

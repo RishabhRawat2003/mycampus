@@ -13,7 +13,7 @@ const ByIntrest = () => {
   const fetchPackages = async () => {
     try {
       const response = await axios.get(`${apiUrl}/api/v1/package/get-packages`);
-      setPackages(response.data.packages);
+      setPackages(response.data?.packages?.slice(0,8));
       setLoading(false);
     } catch (err) {
       setError('Failed to fetch packages');
@@ -78,7 +78,7 @@ const ByIntrest = () => {
             className="flex h-auto md:h-full transition-transform duration-500 ease-in-out"
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
           >
-            {packages.slice(0,8).map((pkg, index) => (
+            {packages.map((pkg, index) => (
               <div
                 key={pkg._id}
                 className="w-full flex-shrink-0 flex flex-col md:flex-row-reverse"
@@ -90,7 +90,7 @@ const ByIntrest = () => {
                 />
                 <div className="w-full flex flex-col p-3 md:w-1/2 lg:p-5 2xl:p-14 justify-between">
                   <div className="w-full flex flex-col">
-                    <h1 className="text-lg font-semibold lg:text-xl xl:text-3xl">
+                    <h1 className="text-lg font-semibold lg:text-xl xl:text-4xl">
                       {pkg.packageName}
                     </h1>
                     <h3 className="text-sm lg:text-base xl:text-xl xl:my-2">
@@ -128,7 +128,7 @@ const ByIntrest = () => {
 
         {/* Bullet Indicators */}
         <div className="flex gap-2 mt-4 justify-center items-center xl:mt-6">
-          {packages.slice(0,8).map((_, index) => (
+          {packages.map((_, index) => (
             <button
               key={index}
               onClick={() => goToSlide(index)}

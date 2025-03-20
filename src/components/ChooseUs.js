@@ -24,14 +24,14 @@ const ChooseUs = () => {
 
   return (
     <>
-      <div className="w-full bg-cover bg-center text-white  overflow-x-hidden">
+      <div className="w-full bg-cover bg-center text-white  overflow-x-hidden mb-10">
         <div
           className="w-full min-h-[700px] sm:min-h-[500px] lg:min-h-[600px] bg-cover bg-center text-white flex flex-col items-center py-10 mt-16"
           style={{
             backgroundImage: `url(${ABOUTIMAGE})`,
           }}
         >
-          <h1 className="text-4xl font-bold mb-10">Why Choose Us ?</h1>
+          <h1 className="text-4xl font-bold mb-10">Our Satisfied Customers</h1>
 
           <div className="relative w-full">
 
@@ -50,7 +50,7 @@ const ChooseUs = () => {
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-[100px] h-[100px] object-cover rounded-full mx-auto mb-4"
+                    className="w-[100px] h-[100px] object-cover rounded-full mx-auto mb-4 border-2 border-blue-500"
                   />
                   <div className="px-7">
                     <h2 className="text-2xl font-bold mb-2">{item.title}</h2>
@@ -84,11 +84,7 @@ const ChooseUs = () => {
           </div>
         </div>
       </div>
-
     </>
-
-
-
   );
 };
 

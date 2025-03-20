@@ -108,7 +108,9 @@ const Navbar = () => {
                 {/* Logo */}
 
                 <div>
-                    <img src={Logo} alt="logo" className="w-24" />
+                    <Link to="/">
+                        <img src={Logo} alt="logo" className="w-24" />
+                    </Link>
                 </div>
                 <div>
                     {/* Links */}
@@ -116,7 +118,7 @@ const Navbar = () => {
                         {[
                             { path: "/", label: "Home" },
                             { path: "/aboutus", label: "About Us" },
-                            { path: "/experientialprogramme", label: "Experiential Programme" },
+                            { path: "/experientialprogramme", label: "Experiential Programmes" },
                             { path: "/blogs", label: "Blogs" },
                             // { path: "/collage-packages", label: "Collage Packages" },
                             // { path: "/corporate-packages", label: "Corporate Packages" },
@@ -252,7 +254,7 @@ const Navbar = () => {
                         {[
                             { path: "/", label: "Home" },
                             { path: "/aboutus", label: "About Us" },
-                            { path: "/experientialprogramme", label: "Experiential Programme" },
+                            { path: "/experientialprogramme", label: "Experiential Programmes" },
                             // { path: "/collage-packages", label: "Collage Packages" },
                             // { path: "/corporate-packages", label: "Corporate Packages" },
                             { path: "/contactus", label: "Contact Us" },

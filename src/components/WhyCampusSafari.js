@@ -13,6 +13,8 @@ import {
     FaSmile,
     FaBus,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
+
 
 function WhyCampusSafari() {
     const data = [
@@ -34,7 +36,7 @@ function WhyCampusSafari() {
         <div className="w-full h-auto flex flex-col px-5 md:px-10 lg:px-20 py-10 xl:py-20 bg-gray-50">
             {/* Heading */}
             <h1 className="text-center text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-[#49545A]">
-                Why Choose <span className="text-[#00A5CF]">Campus Safari?</span>
+                Why Choose <span className="text-[#00A5CF]">My Campus Safari?</span>
             </h1>
 
             {/* Auto-Scrolling Rows */}
@@ -43,7 +45,9 @@ function WhyCampusSafari() {
                 <div className="w-full overflow-hidden">
                     <div className="flex gap-6 md:gap-12 lg:gap-16 items-center carousel-left h-[200px]">
                         {[...data, ...data].map((item, index) => (
-                            <div
+                            <Link
+                                to='https://drive.google.com/file/d/1kHQqsBNQ70tURekjsoSYDHYUmYGB04dQ/view?usp=sharing'
+                                target="_blank"
                                 key={index}
                                 className="min-w-[200px] md:min-w-[250px] lg:min-w-[300px] flex flex-col justify-center items-center text-center bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300"
                             >
@@ -53,7 +57,7 @@ function WhyCampusSafari() {
                                 <h1 className="text-lg xl:text-xl font-bold text-[#49545A] mt-5">
                                     {item.title}
                                 </h1>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </div>
