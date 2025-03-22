@@ -60,7 +60,7 @@ const ContactUs = () => {
 
                         {/* WhatsApp Chat Button */}
                         <a
-                            href="https://wa.me/919140826298"
+                            href="https://wa.me/919289166556"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition"

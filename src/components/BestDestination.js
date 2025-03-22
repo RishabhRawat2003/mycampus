@@ -39,7 +39,7 @@ const BestDestination = () => {
                             <div className='w-full h-40 flex lg:h-60'>
                                 <img src={data.image} alt='destination' className='object-cover w-full h-full' />
                             </div>
-                            <div className='p-3 w-full h-auto text-white bg-[#00A5CF] flex justify-center items-center lg:p-6 lg:text-lg lg:font-semibold'>
+                            <div className='p-3 w-full h-auto text-white text-sm sm:text-base bg-[#00A5CF] flex justify-center items-center lg:p-6 lg:text-lg lg:font-semibold'>
                                 {data.name}
                             </div>
                         </div>
